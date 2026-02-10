@@ -124,7 +124,7 @@
       },
       {
         "letter": "D",
-        "text": "One-way communication from aircraft to stations or locations on the surface of the earth",
+        "text": "One-way communication from aircraft to stations or locations on the surface of the earth Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 8 von / of 55",
         "correct": false
       }
     ]
@@ -254,7 +254,7 @@
       },
       {
         "letter": "D",
-        "text": "A signal indicating the direction of the runway-in-use",
+        "text": "A signal indicating the direction of the runway-in-use Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 9 von / of 55",
         "correct": false
       }
     ]
@@ -312,6 +312,188 @@
     ]
   },
   {
+    "id": 13,
+    "question": "What does the abbreviation \"SELCAL\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Selective Calling System",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Simple approach lighting System",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A system in which radiotelephony communication between two stations can take place in both directions simultaneously",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A system provided for direct exchange of information between air traffic services (ATS) units",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "What does the abbreviation \"SSR\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Secondary Surveillance Radar",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Search and Surveillance Radar",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Surface Strength of Runway",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Standard Snow Report",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "What does the abbreviation \"RNAV\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Area navigation",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Route navigation",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Radio navigation",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Radar aided navigation",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "question": "What does the abbreviation \"RVR\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Runway Visual Range",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Runway Visibility Report",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Recleared Via Route ….",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Radar Vectors Requested Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 10 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "question": "What does the abbreviation \"HJ\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Sunrise to sunset",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "No specific working hours",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Continuous day and night service",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Sunset to sunrise",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "question": "QFE is the radiotelephony Q-code to indicate:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The atmospheric pressure at aerodrome elevation (or at runway threshold)",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The atmospheric pressure referred to the highest fixed obstacle located on the surface of an aerodrome",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The altimeter sub-scale setting to obtain elevation when on the ground",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The atmospheric pressure referred to a point on the surface of the Earth",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "QNH is the radiotelephony Q-code to indicate:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The altimeter sub-scale setting to obtain aerodrome elevation when on the ground",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The atmospheric pressure at aerodrome elevation (or at runway threshold)",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The atmospheric pressure measured at the aerodrome reference point (ARP)",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The atmospheric pressure referred to the highest obstacle located on the surface of an aerodrome",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 20,
     "question": "If you are requested to report your height, to which Q-code setting would you refer?",
     "answers": [
@@ -359,6 +541,1124 @@
       {
         "letter": "D",
         "text": "QFE",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "question": "What does QDM mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Magnetic heading (zero wind)",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "True heading to the station (zero wind)",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "True bearing from the station",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Magnetic bearing Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 11 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "question": "What is the Q-code for \"MAGNETIC HEADING (ZERO WIND)\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "QDM",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "QNE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "QTE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "QDR",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "question": "What does QTE mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "True bearing from the station",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Magnetic bearing from the station",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "True heading to the station (no wind)",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Magnetic heading to the station",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "question": "What is the Q-code for \"TRUE BEARING FROM THE STATION\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "QTE",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "QDR",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "QFE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "QDM",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "question": "What does QDR mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Magnetic bearing",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Magnetic heading (zero wind)",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "True heading to the station",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "True bearing from the station",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "question": "What is the Q-code for \"MAGNETIC BEARING\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "QDR",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "QDM",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "QFE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "QTE",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "question": "The message to a ground station on a landing site \"PLEASE CALL A TAXI CAB FOR US, WE WILL ARRIVE AT 1045\" is …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "an Unauthorized Message in the aeronautical mobile service",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "a Flight Regularity Message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "an Urgency Message",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "a Flight Safety Message Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 12 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "question": "Messages concerning non-routine landings of an aircraft are:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Flight Regularity Messages",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Flight Safety Messages",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Unauthorized Messages in the aeronautical mobile service",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Urgency Messages",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "question": "Flight Safety Messages are ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "air traffic control messages",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "messages concerning non-routine landings",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "messages relating to direction finding",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "messages concerning the safety of an aircraft, a vessel, any other vehicle or a person",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "question": "Which of the messages listed below shall be handled by the aeronautical mobile service?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Messages Relating to Direction Finding",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Aeronautical Security Messages",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aeronautical Administrative Messages",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Messages of Airline Operators",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "question": "Which of the messages listed below shall not be handled by the aeronautical mobile service?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Radio Teletype Messages",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Urgency Messages",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Flight Safety Messages",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Meteorological Messages Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 13 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "question": "The priority of the instruction \"TAXI TO HOLDING POINT RUNWAY 05 VIA A\" is ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "same as \"LINE UP RUNWAY 07 AND WAIT\"",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "higher than \"TRANSMIT FOR QDM\"",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "lower than \"CLEARED TO LAND\"",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "higher than \"CAUTION CONSTRUCTION WORK LEFT OF TAXIWAY G\"",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "question": "The message addressed to an Area Control Centre \"REQUEST RADAR VECTORS TO CIRCUMNAVIGATE ADVERSE WEATHER\" is ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "a Flight Safety Message",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "a Meteorological Message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "a Message Relating to Direction Finding",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "an Urgency Message",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "question": "Air traffic control messages (clearances, instructions etc.) belong to the category of …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Flight Safety Messages",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Class B Messages",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Service Message",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Flight Regularity Message",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "question": "The clearance \"RUNWAY 03, CLEARED FOR TAKE-OFF\" is…",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "a Flight Safety Message",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "an Urgency Message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "an Unauthorized Message in the aeronautical mobile service",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Flight Regularity Messages",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "question": "The order of priority of the following messages in the aeronautical mobile service is ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Distress Message, Urgency Message, Message Relating to Direction Finding",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Message Relating to Direction Finding, Distress Message, Urgency Message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Distress message, Flight Safety Message, Urgency Message",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Meteorological message, Message Relating to Direction Finding, Flight Regularity Message",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "question": "The order of priority of the following messages in the aeronautical mobile service is…",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Flight Safety Message, Meteorological Message, Flight Regularity Message",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Meteorological Message, Message Relating to Direction Finding, Flight Safety Message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Flight Safety Message, Message Relating to Direction Finding, Urgency Message",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Flight Regularity Message, Distress Message, Meteorological Message Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 14 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "question": "The priority of a pilot‘s message \"REQUEST QDM\" is ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "higher than \"TURN LEFT HEADING …\"",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "same as \"LATEST QNH 1018\"",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "lower than \"DECEND FLIGHT LEVEL …\"",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "lower than \"REQUEST CLIMB FLIGHT LEVEL …\"",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "question": "What is the correct way of spelling HBJYC?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Hotel Bravo Juliett Yankee Charlie",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Hotel Bravo Juliett India Kilo",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Hotel Bravo India Yankee Charlie",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Hotel Bravo India Victor Charlie",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "question": "What is the correct way of spelling FRl-VOR?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Foxtrot Romeo India - VOR",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Foxtrot Romeo Juliett - VOR",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Fox Romeo Yankee - VOR",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Fox Romeo India - VOR",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "question": "What is the correct way of transmitting the altitude of 3500 ft?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Three thousand five hundred feet",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Three five zero zero feet",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Three five double \"O\" feet",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Three five hundred feet",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "question": "What is the correct way of transmitting a QNH of 1001?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "QNH one zero zero one",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "QNH one double zero one",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "QNH one thousand and one",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "QNH one double \"O\" one",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "question": "What is the correct way of transmitting VHF frequency 118.010 MHz?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "One one eight decimal zero one zero",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "One eighteen decimal zero one",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "One one eight point zero one zero",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "One one eight decimal zero one Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 15 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "question": "What is the correct way of transmitting the number 13 500?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "One three thousand five hundred",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "One three five zero zero",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Thirteen thousand five hundred",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "One three five hundred",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "question": "When transmitting time, which time system shall be used?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Coordinated Universal Time (UTC)",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Local time (LT) 24-hour clock",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "No specific system, as only the minutes are normally required",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Local time (LT) a.m. and p.m.",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "question": "The time is 4:15 pm. What is the correct way of transmitting this time if there is a possibility of confusion?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "One six one five",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Four fifteen p.m.",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Four fifteen in the afternoon",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Sixteen fifteen",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "question": "The time is 9:20 am. What is the correct way of transmitting this time if there is no possibility of confusion (same hour)?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Two zero",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Two zero this hour",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nine twenty a.m.",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Twenty",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "question": "An ATC unit providing air traffic control service to departing aircraft by means of surveillance radar has the call sign:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "DEPARTURE",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CONTROL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "APPROACH",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "DELIVERY",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "question": "An ATC unit providing air traffic control service to enroute aircraft by means of surveillance radar has the call sign:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "RADAR",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CONTROL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "DELIVERY",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "MONITOR Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 16 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "question": "What is the radiotelephony call sign for the aeronautical station indicating aerodrome control?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "TOWER",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CONTROL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "APRON",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "AERODROME",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "question": "What is the radiotelephony call sign for the aeronautical station indicating flight information service?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "INFORMATION",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "FLIGHT INFORMATION CENTRE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "RADIO",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "FLIGHT CENTRE",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "question": "What is the radiotelephony call sign for the aeronautical station providing surface movement control of aircraft on the manoeuvring area?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "GROUND",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "TOWER",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CONTROL",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "APPROACH",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "question": "What is the radiotelephony call sign for the aeronautical station providing approach control service (no radar service)?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "APPROACH",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CONTROL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "ARRIVAL",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "RADAR",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "question": "What is the radiotelephony call sign for the aeronautical station indicating an area control centre (no radar)?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "CONTROL",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "RADAR",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CENTRE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "APPROACH",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "question": "What is the radiotelephony call sign for the aeronautical station indicating approach control radar departures?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "DEPARTURE",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CONTROL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "RADAR",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "APPROACH Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 17 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "question": "What is the radiotelephony call sign for the aeronautical station indicating approach control radar arrivals?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "ARRIVAL",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "RADAR",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "DIRECTOR",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "APPROACH",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "question": "Which of the following abbreviated call signs of aircraft XYABC is correct?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "XBC or XABC",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "XYBC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "BC",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "ABC",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "question": "Which of the following abbreviated call signs of Cherokee XYABC is correct?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Cherokee BC or Cherokee ABC",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Cherokee XYBC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Cherokee XBC",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Cherokee XABC",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "question": "When shall an aircraft station use its abbreviated call sign?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "If it has already been used by the aeronautical station",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Only after satisfactory communication has been established",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Provided no confusion is likely to result",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "In dense traffic",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "question": "What is the correct call sign of Fastair 345 in the initial call, if the aircraft has a maximum take-off mass of 136 tons or more?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Fastair 345 heavy",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Fastair 345 widebody",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Heavy Fastair 345",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Fastair 345",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "question": "When shall an aircraft in the wake turbulence category HEAVY include the word \"HEAVY\" immediately after the call sign?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "When establishing radio contact with ATC and after every frequency change",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Never",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "In all calls to the aerodrome control tower and the approach control unit",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "In the initial call to the aerodrome control tower and the approach control unit Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 18 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "question": "When and by whom is the change of call signs of aircraft stations during flight allowed?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "On the instruction of an ATC unit in the interests of safety",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "To facilitate subsequent radiotelephony communications by an aeronautical station",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "When changing the destination airport during flight by the aircraft operator",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "In case of diversion to the alternate aerodrome by the pilot-in-command",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "question": "When may the name of the call sign of an aeronautical station or location name be omitted?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "After the establishment of voice communication",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Never",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "In dense traffic during the rush hours",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Only after the aeronautical station has used the abbreviated call sign",
         "correct": false
       }
     ]
@@ -442,6 +1742,2268 @@
     ]
   },
   {
+    "id": 70,
+    "question": "The phrase \"STANDBY\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Wait and I will call you",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Continue on present heading and listen out",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Permission granted for action proposed",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Select STANDBY on the SSR transponder Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 19 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "question": "The phrase \"READ BACK\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Repeat all, or the specified part, of this message back to me exactly as received",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Let me know that you have received and understood this message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Check and confirm with originator",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Did you correctly receive this message?",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "question": "The phrase \"CHECK\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Examine a system or procedure",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Repeat your last transmission",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Consider that transmission as not sent",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Did you correctly receive this message?",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "question": "Which phrase shall be used for \"I SHOULD LIKE TO KNOW…\" or \"I WISH TO OBTAIN…\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "REQUEST",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "ACKNOWLEDGE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CONFIRM",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "REPORT",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "question": "Which phrase shall be used for \"Pass me the following information …\"",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "REPORT",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "SAY AGAIN",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CHECK",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "REQUEST",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "question": "Which phrase shall be used to confirm that a message has been repeated correctly?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "CORRECT",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "THAT IS RIGHT",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "THAT IS AFFIRMATIVE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "AFFIRM",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "question": "Which phrase shall be used for \"AN ERROR HAS BEEN MADE IN THIS TRANSMISSION. THE CORRECT VERSION IS …\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "QNH 1017, CORRECTION QNH 1016",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "QNH 1017, NEGATIVE 1016",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "QNH 1017, NEGATIVE I SAY AGAIN 1016",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "QNH 1017, NEGATIVE QNH 1016 Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 20 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "question": "Which phrase shall be used if the repetition of an entire message is required?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "SAY AGAIN",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "REPEAT YOUR MESSAGE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "WHAT WAS YOUR MESSAGE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "REPEAT YOUR LAST TRANSMISSION",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "question": "Which phrase shall be used for \"CONSIDER THAT TRANSMISSION AS NOT SEND\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "DISREGARD",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CANCEL MY LAST MESSAGE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "FORGET IT",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "MY LAST TRANSMISSION IS CANCELLED",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "question": "Which phrase shall be used for \"I UNDERSTAND YOUR MESSAGE AND WILL COMPLY WITH IT\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "WILCO",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "ROGER",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "OK, WILL DO IT",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "WILL COMPLY WITH YOUR INSTRUCTION",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "question": "Which phrase shall be used for \"YES\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "AFFIRM",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "YES",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "AFFIRMATIVE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "ROGER",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "question": "The phrase \"MONITOR\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Listen out on (frequency)",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wait and I will call you",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Examine a system or procedure",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Establish radio contact with…",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "question": "The instruction: \"Fastair 345 STANDBY FOR TOWER ON 118.900\" means?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Fastair 345 may be requested on frequency 118.900 when its intended that the Tower unit will initiate communications soon",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Fastair 345 shall contact TOWER on 118.900",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Fastair 345 may be requested on frequency 118.900 on which aerodrome data are being broadcast",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Fastair 345 shall standby on the current frequency Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 21 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "question": "Fastair 345 receives the instruction to contact Stephenville ARRIVAL on frequency 118.000. What is the correct confirmation by the pilot?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Fastair 345 contact 118.0",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Changing over Fastair 345",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Changing to ARRIVAL Fastair 345",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Stephenville ARRIVAL Fastair 345",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "question": "Which phrase shall be used when a pilot is unable to comply with a clearance or instruction?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "UNABLE",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "NEGATIVE INSTRUCTION",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "IMPOSSIBLE TO MAKE IT",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "DISREGARD",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "question": "Which phrase shall a pilot use to inform ATC that he is initiating a missed approach procedure?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "GOING AROUND",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "MISSED APPROACH",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "OVERSHOOTING",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "PULLING UP",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "question": "An aircraft had initially been cleared to climb to FL 100. For separation purposes the aircraft has to be levelled off at FL80 for a few minutes. ATC will give this instruction by using the phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "STOP CLIMB AT FL 80",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "MAINTAIN FL 80",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CLEARED FL 80",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "LEVEL OFF AT FL 80",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "question": "Which phrase shall be used to instruct a pilot to set the transponder to mode A/C code 0410?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "SQUAWK 0410",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "SQUAWK ALPHA 0410 AND CHARLIE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "SQUAWK MODE ALPHA CODE 0410 AND MODE CHARLIE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "SQUAWK ALPHA AND CHARLIE ON 0410",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "question": "The phrase \"CANCELLING MY IFR FLIGHT\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The pilot changes from IFR to VFR",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The pilot indicates that his landing is assured and he will not submit the landing time",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The pilot closes his flight plan",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The pilot continues VFR and closes his flight plan Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 22 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "question": "Which phrase shall be used by ATC if a position report over a compulsory reporting point is not required?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "OMIT POSITION REPORT OVER …. (fix)",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CANCEL POSITION REPORT OVER …. (fix)",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "DO NOT REPORT OVER …. (fix)",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "NO POSITION REPORT OVER …. (fix)",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "question": "The permission to taxi to the runway in use for departure will be phrased:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "TAXI TO HOLDING POINT RUNWAY ... VIA ….",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "RUNWAY ... TAXI VIA …",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "TAXI VIA ... TO RUNWAY …",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "CLEARED TO RUNWAY … VIA …",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "question": "If a pilot may start climb/descent at his convenience, ATC will use the phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "WHEN READY CLIMB/DESCEND TO FL …",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CLIMB/DESCEND TO FL ... AT YOUR CONVENIENCE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CLIMB/DESCEND TO FL ... AT ANY TIME",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "CLIMB/DESCEND TO FL …",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "question": "ATC will give a descent instruction by using the phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "DESCEND TO FL …",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "LEAVE TO FL ... FOR FL …",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CLEARED TO FL ...",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "MAINTAIN FL ...",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "question": "The clearance to taxi to the take-off position will be phrased:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "LINE UP RUNWAY ….",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "TAXI TO TAKE-OFF POSITION",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CONTINUE TO TAKE-OFF POSITION AND HOLD",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "CLEARED INTO POSITION AND HOLD",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "question": "If requested by the control tower to report having crossed a runway, the pilot has to use the phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "RUNWAY VACATED",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "I AM CLEAR OF RUNWAY",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "I AM BEYOND THE RUNWAY",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "I HAVE LEFT THE RUNWAY Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 23 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "question": "In order to get a bearing, the ground station will request the pilot to ….",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "TRANSMIT FOR DIRECTION FINDING",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "SQUAWK IDENT",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "REPORT BEARING",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "TRANSMIT FOR BEARING",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "question": "The prescribed phrase for obtaining permission to taxi to the runway for departure is:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "REQUEST TAXI",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "REQUEST TAXI CLEARANCE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "WHAT IS MY TAXI CLEARENCE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "REQUEST PERMISSION TO TAXI",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "question": "ATC will give a climb instruction by using the phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "CLIMB TO  FL ….",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "MAINTAIN FL ….",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "LEAVE FL …. FOR FL ….",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "CLEARED TO FL ….",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "question": "If a transponder does not transmit on mode C as expected, ATC will instruct the pilot to switch on mode C by using the phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "SQUAWK CHARLIE",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "SQUAWK ALTIMETER",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "SQUAWK PRESSURE ALTITUDE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "TRANSMIT ON MODE CHARLIE Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 24 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "question": "The advice by a radar controller \"TRAFFIC THREE O‘CLOCK\" means that the position of the mentioned traffic is ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "on the right side",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "on the left side",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "separated by three miles",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "three miles ahead",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "question": "What is the correct procedure for the pilot to change from IFR-flight to VFR-flight?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Contact ATC and cancel IFR",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A change from IFR to VFR is not possible",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Contact ATC and request clearance to proceed in accordance with the visual flight rules",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Contact ATC and request to close the flight plan",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "question": "The phrase \"CLEARENCE EXPIRES AT 1025\" means?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The clearance is void if the aircraft is not airborne until or at 1025",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The clearance is void if the aircraft departs before 1025",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The pilot shall start engines not later than 1025",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The pilot shall stand by and ask for clearance again at 1025",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "question": "When shall the phrase \"TAKE-OFF\" be used by a pilot?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "To acknowledge take-off clearance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Never, it is used only by the control tower",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Only when the aircraft has already moved onto the active runway",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "To inform TOWER when ready for departure",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "question": "How shall a pilot inform the control tower that he is prepared for take-off?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "READY FOR DEPARTURE or READY",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "READY FOR TAKE-OFF",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "READY TO LINE-UP",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "READY TO GO",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "question": "How shall a pilot inform the control tower that he has to abandon the take-off manoeuvre?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "STOPPING",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "ABANDONING TAKE-OFF",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "ABORTING TAKE-OFF",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "CANCELLING TAKE-OFF Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 25 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "question": "How shall a pilot inform the control tower that he has to perform a missed approach?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "GOING AROUND",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "OVERSHOOTING",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "PULLING UP",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "WILL MAKE ANOTHER APPROACH",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "question": "The phrase \"GO AROUND\" means?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Carry out a missed approach",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Make a 360° turn",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Proceed with your message",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Overtake the aircraft ahead",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "question": "The phrase \"ORBIT RIGHT\" means?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Make 360° turns to the right",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Turn right to avoid other traffic",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Right-hand circuits are in use",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Leave the runway to the right",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "question": "The phrase \"VACATE RUNWAY IMMEDIATELY\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Clear the runway immediately",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Give way to aircraft from the left",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Hold position on the left side of the runway",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Turn left to leave the runway",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "question": "What is the correct way for the pilot to acknowledge that ATIS Information Golf has been received?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "INFORMATION GOLF",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "WE HAVE THE INFORMATION",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "WE HAVE THE ATIS GOLF",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "WEATHER GOLF RECEIVED",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "question": "What is the correct way of transmitting frequency 120.375 MHz?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "One two zero decimal three seven five",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "One two zero decimal three seven",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "One two zero three seven",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "One twenty decimal three seven Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 26 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "question": "Which elements of instructions or information shall be read back?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Clearances, taxi instructions, runway-in-use, QNH, SSR codes, level instructions, heading and speed instructions, frequency in the case of frequency change",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Runway in use, ground visibility, dew point, take-off clearance, frequency in the case of frequency changes",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Clearances, wind direction/speed, heading instructions, QNH, frequency in the case of frequency changes",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Instructions concerning heading, flight level, speed, altimeter setting, flight visibility, wind direction, take-off clearance and frequency in the case of frequency changes",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "question": "Shall an ATC route clearance be read back?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Yes",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "No, if the ATC route clearance is transmitted in a published form (e.g. Standard Instrument Departure Route/SID)",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "No, if the communication channel is overloaded",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "No, if the content of the ATC clearance is clear and no confusion is likely to arise",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "question": "An aircraft is instructed to hold short of the runway-in-use. What is the correct phraseology to indicate it will follow this instruction?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "HOLDING SHORT",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "ROGER",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "WILL STOP BEFORE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "WILCO",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 2500,
+    "question": "feet before turning right, wind 270 / 6 knots, Runway 22, cleared for take-off\". What is the correct read back?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "XBC CLIMB STRAIGHT AHEAD TO ALTITUDE 2500 FEET, THEN TURN RIGHT, RUNWAY 22, CLEARED FOR TAKE-OFF",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "WILCO, CLEARED FOR TAKE-OFF, XBC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "STRAIGHT AHEAD 2500 FEET RIGHT TURN, WIND WEST 6 KNOTS, CLEARED FOR TAKE-OFF, XBC",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "RIGHT TURN AFTER 2500, ROGER, XBC",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "question": "The phrase \"SQUAWK 1234\" means?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Switch transponder to Mode/Code 1234",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Give a short count for DF (direction finder)",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Standby on frequency 123.4 MHz",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Make a test transmission on 123.4 MHz",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "question": "RADAR informs aircraft XYABC: \"XBC IDENTIFIED\". What does this mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Radar identification has been achieved",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "XBC is not visible on the radar screen",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "XBC should operate the IDENT-button",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "XBC should perform an identification turn Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 27 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "question": "RADAR instructs aircraft XYABC: \"XBC SQUAWK IDENT\". What does this mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "XBC shall operate the IDENT-button (operation of the SPI feature)",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Radar identification has been achieved by correlating an observed radar blip with aircraft XY-ABC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "X-BC should perform an identification turn of at least 20 degrees",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "X-BC shall reselect his assigned mode and code",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "question": "RADAR instructs aircraft XYABC: \"XBC SQUAWK STANDBY\". What does this mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "XBC is requested to select the standby feature on the transponder",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "XBC is requested to standby for radar vectors",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "XBC is requested to standby as the radar controller is busy",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "XBC is requested to standby on the frequency",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "question": "RADAR instructs aircraft XYABC: \"X BC RESET SQUAWK 1015\". What does this mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "XBC is requested to reselect SSR code 1015",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "XBC is requested to set new code 1015",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "XBC has been identified by SSR code 1015",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "XBC has been identified at 10:15 (UTC)",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "question": "To establish radio contact with \"MÜNCHEN GROUND\" the pilot of DIBEL shall transmit the following call:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "MÜNCHEN GROUND DIBEL",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "DIBEL, MÜNCHEN GROUND OVER",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "MÜNCHEN GROUND DIBEL GO AHEAD",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "MÜNCHEN GROUND THIS IS DIBEL",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "question": "During approach to an airport with parallel runways the pilot of an IFR flight has to transmit on initial contact, after changing frequency from approach control to aerodrome control, the radio call sign of his aircraft and …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "the designation of the runway being approached",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "passing the transition level",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "cleared altitude/flight level",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "the type of instrument approach",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "question": "The pilot of an IFR flight has to transmit the following data on initial contact after changing frequency from approach control to aerodrome control:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Radio call sign of the aircraft only",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Aircraft call sign and cleared altitude/flight level",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aircraft call sign and present position",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Aircraft call sign and flight level or altitude",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "question": "When establishing radio contact, how shall aircraft XYABC call Stephenville TOWER?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Stephenville TOWER XYABC",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Stephenville TOWER XBC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Stephenville XYABC",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "TOWER XYABC",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "question": "Aircraft XYABC has been instructed to contact Stephenville TOWER on frequency 118.700. What is the correct way to indicate it will follow this instruction?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "XBC 118.7",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "WILL CHANGE TO TOWER XBC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "XBC CHANGING OVER",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Stephenville TOWER XBC",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "question": "Aircraft XYABC has been instructed to listen on ATIS frequency 123.250, on which the aerodrome data are being broadcast. What is the correct way to indicate it will follow this instruction?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "XBC MONITORING 123.250",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "WILL CONTACT 123.250 XBC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "XBC CHECKING 123.250",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "CHANGING TO 123.250 XBC",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "question": "Aircraft XYABC is making a radio check with Stephenville TOWER on frequency 118.700. What is the correct phrasing for this transmission?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Stephenville TOWER XYABC HOW DO READ",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Stephenville TOWER XYABC PRE-FLIGHT CHECK",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Stephenville TOWER XYABC FREQUENCY CHECK",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Stephenville TOWER XYABC SIGNAL CHECK Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 29 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "question": "On the readability scale what does \"READABILITY 3\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Readable but with difficulty",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "No problem to understand",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Unreadable",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Loud and clear",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "question": "On the readability scale what does \"READABILITY 5\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Perfectly readable",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Unreadable",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Readable but with difficulty",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Problem to understand",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "question": "Which elements of information should an abbreviated position report during an IFR flight always contain?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Radio call sign, position, time over",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Radio call sign, position, time over, level",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Radio call sign, position, level",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Radio call sign, position, next position",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "question": "What shall be the pilot‘s read back for: \"CLIMB TO FL 280\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Climbing to flight level two eight zero",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Climbing flight level two eight zero",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Climbing to two eighty",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Climbing two eight zero Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 30 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "question": "What shall the pilot‘s read back be for: \"CLIMB TO ALTITUDE 2500 feet\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Climbing to altitude two thousand five hundred feet",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Up two thousand five hundred",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Climbing altitude two thousand five hundred feet",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Climbing to two point five",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "question": "ATC clears Fastair 345 to descend from FL 100 to FL 80. What is the correct read back by the pilot?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Fastair 345 leaving flight level 100 descending to flight level 80",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Fastair 345 leaving 100 to 80",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Descending to 80, Fastair 345",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Down to flight level 80, Fastair 345",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "question": "Runway visual range (RVR) is included in the weather report when the visibility is …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "less than 1500 m",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "1000 ft or less",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "less than 1000 m",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1500 ft or less",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "question": "When the term \"SCATTERED (SCT)\" is used in radiotelephony in connection with meteorological conditions, the cloud amount is ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "3 to 4 oktas",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "5 to 7 oktas",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "NO SIGNIFICANT CLOUDS",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "8 oktas",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "question": "When the term \"BROKEN (BKN)\" is used in radiotelephony in connection with meteorological conditions, the cloud amount is …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5 to 7 oktas",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "1 to 4 oktas",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "NO SIGNIFICANT CLOUDS",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "8 oktas Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 31 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "question": "When the term \"OVERCAST (OVC)\" is used in radiotelephony in connection with meteorological conditions, the cloud amount is …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "8 oktas",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "5 to 7 oktas",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "3 to 4 oktas",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1 to 2 oktas",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "question": "When the term \"CAVOK\" is used in a routine meteorological report (METAR), the values of visibility and clouds are:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Visibility 10 km or more, no cloud below 5000 ft AGL",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Visibility more than 8 km, no cloud below 3000 ft AGL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Visibility more than 5000 m, no cloud below 1500 m AGL",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Visibility 10 km or more, no cloud below 1500 ft AGL",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "question": "In what units of measurement is the visibility in a routine meteorological report (METAR) expressed in plain language?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Less than 5 km in metres, above in kilometres",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "In feet and nautical miles",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "In nautical miles only",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Up to 1500 m in metres, above in kilometres",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "question": "What is the correct way of expressing visibility in plain language (in METAR)?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Visibility 1200 metres",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Visibility 1200 feet",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Visibility 1.2 kilometres",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Visibility 1.2 nautical miles",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "question": "When transmitting runway visual range (RVR) for runway 16 ATC will use the following phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "RVR RUNWAY 16, TOUCHDOWN ZONE, METRES, MID POINT, METRES, STOP END,  METRES",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "THE VALUES OF THE TRANSMISSION ARE: …. METRES AND ... METRES",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "RVR AT THE BEGINNING OF RUNWAY 16 IS ... METRES",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "RVR RUNWAY 16, METRES DIAGONAL, METRES DIAGONAL METRES",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "question": "What does “RUNWAY CONDITION CODE 5” in a runway surface description mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Braking action good",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Braking action medium",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Braking action poor",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Braking action not measurable Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 32 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "question": "What does “RUNWAY CONDITION CODE 1” in a runway surface description mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Braking action poor",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Braking action medium",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Braking action unreliable",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Braking action good",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "question": "What does “RUNWAY CONDITION CODE 2” in a runway surface description mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Braking action medium to poor",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Braking action medium",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Braking action poor",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Braking action unreliable",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "question": "If you are requested to \"REPORT FLIGHT CONDITIONS\", what does that mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Indicate whether you are flying in IMC or in VMC",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Indicate if visibility is sufficient for landing",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Indicate whether you are flying IFR or VFR",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Indicate weather conditions as wind, visibility, temperature",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "question": "An aeronautical station using the identification \"VOLMET\" in its call sign ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "is a broadcasting service for the transmission of aerodrome meteorological reports for airports",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "can be called by an aircraft in flight to obtain flight information service",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "is an aeronautical station operated by an airport company",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "executes air traffic control service to enroute aircraft",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "question": "The weather report in an ATIS broadcast contains the term \"CAVOK\". This means that an arriving aircraft has to expect …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "no cloud below 5000 ft AGL",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "less than 5/8 clouds below 5000 ft",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "thunderstorm",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "light precipitation",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "question": "What is normally used for ATIS broadcast?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "VHF frequencies",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "NDB frequencies",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "DME voice channel",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Voice channel of an ILS Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 33 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "question": "How can routine meteorological reports (METAR) of specific airports be obtained by aircraft in flight?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "VOLMET",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "ATIS",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "SIGMET",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "AFIS",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "question": "Which information can aircraft in flight obtain by VOLMET?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Routine aerodrome meteorological reports for airports",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "SPECI and TAF",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Runway reports",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "SIGMET",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "question": "Distress is defined as ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "a condition of being threatened by serious and/or imminent danger and of requiring immediate assistance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "a condition concerning the safety of an aircraft or other vehicle, or of some person on board or within sight, but which does not require immediate assistance",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "a condition concerning the safety of some person on board or within sight and requiring immediate assistance",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "a condition concerning the attitude of an aircraft when intercepting the localizer during  an ILS-approach",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "question": "An aircraft in distress shall send the following signal by radiotelephony:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "MAYDAY, emitted preferably three times",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "DETRESFA, emitted three times",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "PAN PAN, emitted three times",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "URGENCY, emitted three times",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "question": "The distress signal and the distress message shall be transmitted on ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "the frequency used or on the emergency frequency",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "the regional guard frequency",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "the FIS frequency designated for the airspace concerned",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "the emergency frequency in any case Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 34 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "question": "The frequency used for the first transmission of a \"MAYDAY\" call shall be …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "the frequency currently in use or on the emergency frequency",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "any other international emergency frequency",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "any frequency at pilot‘s discretion",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "the distress frequency 121.500 MHz",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "question": "The distress message shall contain the following data:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Aircraft call sign, nature of distress, intention of the pilot-in-command, kind of assistance required, present position, level and heading",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Aircraft call sign, route of flight, destination airport",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aircraft call sign, aerodrome of departure, position and level",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Aircraft call sign, present position, assistance required",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "question": "Which of the following frequencies is an international emergency frequency?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "121.500 MHz",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "122.500 MHz",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "6500 KHz",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "121.050 MHz",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "question": "The frequency 121.500 MHz is ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "an international emergency frequency",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "a regional VHF emergency frequency",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "a regional guard frequency",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "a frequency for air-to-air communication",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 165,
     "question": "An aircraft in distress situation shall squawk:",
     "answers": [
@@ -463,6 +4025,188 @@
       {
         "letter": "D",
         "text": "A 6700",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "question": "An aircraft squawking 7700 indicates to the aeronautical station that …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "the aircraft is in distress",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "the aircraft‘s transceiver is unserviceable",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "there is a very sick passenger on board",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "the aircraft is being hijacked Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 35 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "question": "Under which of the following circumstances shall an aircraft squawk an internationally prescribed mode/code?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "In distress",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "When following a SID",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "When passing the transition level",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "When flying within controlled airspace",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "question": "An aircraft squawking 7700 indicates to the aeronautical station that …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "the aircraft is in distress",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "the aircraft has radio communication failure",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "the aircraft has been hijacked",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "his aircraft is entering Class E airspacee",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "question": "Urgency is defined as ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "a condition concerning the safety of an aircraft or other vehicle, or of some person on board or within sight, but which does not require immediate assistance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "a condition concerning the safety of some person on board or within sight and requiring immediate assistance",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "a condition concerning the attitude of an aircraft when intercepting the localizer during an ILS-approach",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "a condition of being threatened by serious and/or imminent danger and of requiring immediate assistance",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "question": "An urgency call shall be initiated by the radiotelephony urgency signal:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "PAN PAN, preferable emitted three times",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "MAYDAY, emitted three times",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "ALERFA, emitted three times",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "URGENCY, emitted three times",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "question": "Which frequency shall be used for the first transmission of an urgency call?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "On the frequency in use",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The regional guard frequency",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Any frequency at pilot‘s discretion",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The international emergency frequency Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 36 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "question": "The urgency message shall contain the following data:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Aircraft call sign, nature of the urgency condition, intention of the pilot-in-command, present position, level and heading, and any other useful information",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Aircraft call sign, present position, level and heading, assistance required",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aircraft call sign, nature of the urgency condition, assistance required",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Aircraft call sign, aerodrome of departure, present position, level and heading",
         "correct": false
       }
     ]
@@ -494,6 +4238,1280 @@
     ]
   },
   {
+    "id": 175,
+    "question": "An aircraft is squawking 7600. This indicates:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "lt is unable to establish communication due to radio equipment failure",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "It is diverting to the alternate aerodrome",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "lt is about to make a forced landing",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "lt is requesting immediate level change",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "question": "An aircraft station fails to establish radio contact with an aeronautical station on the designated frequency. What action is required by the pilot?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Try to establish radio contact on another frequency published for the route of flight",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Return to the airport of departure",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Land at the nearest airport without an ATC unit",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Continue the flight to the destination airport without any communication",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "question": "What action is required by the pilot of an aircraft station which fails to establish radio contact with an aeronautical station?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Try to establish radio contact with other aircraft or aeronautical stations",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Divert to the alternate airport",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Land at the nearest aerodrome appropriate to the route of flight",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Squawk mode A code 7500",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "question": "If all attempts of an aircraft station to establish radio contact with an aeronautical station fail, it shall transmit messages preceded by the phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "\"TRANSMITTING BLIND\"",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "\"READ YOU ONE, READ YOU ONE\"",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "\"PAN PAN, PAN PAN, PAN PAN\"",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "\"HOW DO YOU READ?\"",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "question": "Blind transmission shall be made ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "twice on the designated frequency",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "only once on the designated frequency",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "during VFR flights only",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "on the emergency frequency only",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "question": "When transmitting a message preceded by the phrase \"TRANSMITTING BLIND DUE TO RECEIVER FAILURE\" during an enroute flight, the aircraft station shall also ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "advise the time of its next intended transmission",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "enter immediately base leg when approaching the airfield for landing",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "land at the nearest airfield/airport",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "return to the airport of departure",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "question": "Under which of the following circumstances shall an aircraft station squawk an internationally prescribed code?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "In case of radio communication failure",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "When approaching a prohibited area",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "When flying over desert areas",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "When entering bad weather areas",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "question": "Which aircraft shall, during radio communication failure, keep a watch for instructions issued by visual signals?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Aircraft forming part of the aerodrome traffic at a controlled aerodrome",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "VFR flights above clouds",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aircraft entering the traffic pattern of an uncontrolled airport",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "IFR flights when entering a CTR",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "question": "An IFR flight in IMC encountering radio communication failure the pilot shall ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "set the transponder to Mode A 7600 and maintain the last assigned speed and level or the minimum IFR cruising level for a period of 7 minutes",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "leave controlled airspace and continue the flight within uncontrolled airspace",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "continue the flight to destination aerodrome",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "squawk IDENT and proceed to the alternate aerodrome Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 38 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "question": "An IFR flight in IMC encountering radio communication failure, the pilot is obliged to maintain his last assigned speed and level for a period of 7 minutes. When does this period commence?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "At the time the last assigned level or minimum IFR cruising level is reached or when the transponder code is set to Mode A 7600, whichever is later",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "At the beginning of radio communication failure",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "After noticing radio communication failure",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "At the last contact with ATC",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "question": "An IFR flight in IMC encountering radio communication failure, the pilot is obliged to maintain his last assigned speed and level for a period of 7 minutes. What is the pilot supposed to do thereafter?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Adjust level and speed in accordance with the filed flight plan",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Proceed to an area from where the flight can be continued according to the visual flight rules",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Execute a VMC approach at the nearest suitable aerodrome",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Divert to the most suitable aerodrome according to the route of flight",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "question": "An IFR flight in IMC encountering radio communication failure, the pilot is obliged to maintain the last assigned speed and level for a period of 7 minutes. What is the pilot supposed to do if the minimum IFR cruising altitude is higher than the last assigned level?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The pilot shall climb to the minimum IFR cruising level",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "In any case maintain last assigned flight level",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Hold over present position for 7 minutes than continue in accordance with the filed flight plan",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Continue immediately in accordance with the filed flight plan",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "question": "An IFR flight in IMC encountering radio communication failure, the pilot shall commence descent over the designated navigational aid serving the destination airport (no EAT received):",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Commence descend over the IAF at or as close as possible to the estimated time of arrival according to the current flight plan",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "After holding for 5 minutes in the holding pattern",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Without any delay",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "After 3 minutes, if an expected approach time is not acknowledged",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "question": "An IFR-flight in IMC encountering radio communication failure, the pilot shall land, if possible, within ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "30 minutes after the estimated time of arrival or the last confirmed approach time, whichever is later",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "30 minutes after noticing the radio failure",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "15 minutes after vacating the transition layer",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "20 minutes after leaving the last assigned and acknowledged level",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "question": "An IFR flight in VMC encountering radio communication failure the pilot shall ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "conduct his flight in accordance with the rules for encountering radio communication failure in VMC",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "maintain the altitude last assigned by ATC for a period of 7 minutes, before proceeding to the nearest suitable aerodrome for landing",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "climb or descend to the cruising level indicated in the flight plan",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "continue the flight to destination aerodrome in any case Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 39 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "question": "An IFR flight in IMC encountering radio communication failure while under radar vectors, the pilot shall ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "squawk 7600 and proceed in the most direct manner possible to rejoin the current flight plan route not later than the next significant point, taking into consideration the applicable minimum flight altitude",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "squawk 7600 and maintain the heading last assigned by ATC for a period of 3 minutes and then return to the flight path in accordance with the current flight plan",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "squawk 7600, maintain present heading for 1 minute and thereafter return to the route indicated in the current flight plan on the shortest way",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "squawk 7600 and maintain present heading for the next 7 minutes and then return to the flight path in ac- cordance with the current flight plan",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "question": "In case of a SSR transponder failure occurring after departure of an IFR flight, the pilot shall …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "inform the competent ATC unit immediately",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "land at the nearest suitable aerodrome for repair",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "squawk 7600",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "continue the flight in VMC",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "question": "In case the transponder fails before the departure for an IFR-flight, the pilot shall ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "obtain prior permission by ATC to conduct the flight",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "inform FIS for relay to AlS",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "inform ATC after departure",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "insert under item 18 of the flight plan \"TRANSPONDER UNSERVICEABLE\"",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "question": "What is a pilot expected to do if he reaches the clearance limit with a functioning VHF radio?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Enter the holding pattern and request further clearance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Proceed to the initial approach fix according to his current flight plan",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Continue VFR to destination or alternate aerodrome",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Proceed to the initial approach fix on the shortest way",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "question": "ATC issues an EAT in any case if the anticipated delay is more than ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "20 minutes",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "30 minutes",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "15 minutes",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "10 minutes",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "question": "If a pilot has to hold over an initial approach fix ATC will issue an ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "expected approach time, if the expected delay is more than 20 minutes",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "exact arrival time",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "estimated time of arrival",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "estimated elapsed time",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "question": "Which is the frequency band containing frequencies of the Aeronautical Mobile Service?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "117.975 - 137.000 MHz",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "108.000 - 117.975 MHz",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "11650 -13200 kHz",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1810 - 2850 kHz",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "question": "To which frequency band belong the frequencies 118.000 - 136.975 MHz of the Aeronautical Mobile Service?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Very high frequency",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Low frequency",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Medium frequency",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Very low frequency",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "question": "Which channel spacing is used in the VHF band of aeronautical mobile service?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "25 kHz + 8.33 kHz",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "100 kHz + 8.33 kHz",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "100 kHz",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "50 MHz",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "question": "What are the propagation characteristics of VHF?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Practically straight-line similar to light waves",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The waves are reflected at the ionosphere at the height of about 100 km and reach the earth surface in the form of sky-waves",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Similar to short waves with practically no atmospheric disturbance",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The waves travel along the surface of the earth and penetrate into valleys in a way that topographical obstacles have not influence",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "question": "Which phenomena can influence the reception quality of VHF?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Level of aircraft and topographical features",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Day-night effect",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Ionosphere",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Atmospherics occurring particularly during thunderstorms Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 41 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "question": "Under which of the following circumstances may you expect a solid reception of the TOWER frequency 118.200 MHz?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Aircraft at high level in the vicinity of the ground station",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Aircraft at low level but far away from the ground station",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aircraft at low level, in the vicinity of the ground station, in the radio shadow zone",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Aircraft at low level, far away from the ground station, in the radio shadow zone of a hill",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "question": "The ELBA / ELT transmits on the following frequencies an emergency signal",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "121.500, 243.000 or 406.000 MHz",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "243.000 MHz only",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "119.200 MHz",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "121.500 MHz only",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "question": "Which is the maximum distance at which you might expect solid VHF contact over flat terrain at flight level 100?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Approx.120 NM",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Approx.300 NM",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Approx.12 NM",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Approx.30 NM",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "question": "The air traffic service is providing ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "air traffic control service",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "aeronautical telecommunication service",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "air traffic information service",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "air traffic communication service",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "question": "Air traffic control is provided for ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "IFR flights and aerodrome traffic at controlled aerodromes",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "all VFR flights above 5000 ft MSL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "VFR flights at night within airspace G",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "VFR flights in the identification zone",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "question": "The air traffic control service comprises:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "TWR, APP, ACC",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "AlS, FIC, TWR",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "APP, ACC, SAR",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "TWR, FIC, APP Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 42 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "question": "Information concerning the establishment, condition or change in any aeronautical facility, the timely knowledge of which is essential to personnel concerned with flight operations are published as …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "NOTAM",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "AIP supplement",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "AIC",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "NfL I",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "question": "The collection of active NOTAM presented to the pilot by AIS is called:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Pre-flight Information Bulletin",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "NfL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Flight plan",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Circular Information",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "question": "The Pre-flight Information Bulletins contain all valid ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "active NOTAMs",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "international regulations",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "military activities within the next 24 hours",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "national regulations",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "question": "Changes of instrument procedures are published by means of ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "AIP Supplements or AIP Amendments",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "NfL II",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "AIC",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "alerting messages (ALR)",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "question": "Pilots have to obtain pre-flight information from AIS-C for ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "flights for which a flight plan has to be filed",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "all flights",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "all flights operating during night",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "IFR flights only Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 43 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "question": "What is the measurement unit for wind direction and horizontal speed (except for take-off and landing)?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Degrees true and knots",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Degrees magnetic and kilometres",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Degrees magnetic and miles",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Degrees true and kilometres",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "question": "What is the measurement unit for wind direction and horizontal speed for take-off and landing?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Degrees magnetic and knots",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Degrees magnetic and miles",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Degrees true and knots",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Degrees true and kilometres",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "question": "What is the meaning of the designator \"A65\" on an enroute chart?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "ATS route A65",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Altitude 6500 ft",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Low Flying area six five",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Danger area number six five",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "question": "ATC must be informed on a change of the TAS by ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5% or more",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "15% or more",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "20% or more",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "10% or more",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "question": "In order to conduct an IFR-flight \"AT FL 250\" the aircraft must be equipped with ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "two functioning transceivers with 8.33 kHz channel spacing",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "one transceiver with 25 KHz channel spacing",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "one transceiver with 720 channels",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "one transceiver with 25 KHz and one with at least 50 KHz channel spacing",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "question": "An IFR-flight without DME interrogator may be operated …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "only with a special permission",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "if the aircraft is equipped with VOR and ADF",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "below FL 100, but not to or from international airports",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "to and from international airports with RADAR control Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 44 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "question": "An IFR flight intending to conduct an instrument approach has to be equipped with LLZ-, GP- and Marker beacon receivers ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "during ILS approach",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "during SRE approach",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "during NDB/DME approach",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "in any case",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "question": "By what time at the latest prior to EOBT shall normally be filed a flight plan?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1 hour",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "3 hours",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "0.5 hour",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "2 hours",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "question": "What is the correct entry in an IFR flight plan for a flight level change over Leipzig VOR (LEG)?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "…. A101  LEG/N0250F150  G98 ...",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": ".… A101  N0250/F150  LEG G98 ...",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "…. A101  F150/N0250  LEG G98 ...",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "…. A101  LEG/F150  G98 ...",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "question": "Which letter shall be used in the flight plan to indicate, that the flight commences in accordance with IFR and subsequently changes to VFR?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Y",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Z",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "I",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "V Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 45 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "question": "How many minutes after EOBT is the flight plan automatically cancelled by ATC, if start-up or taxi instructions have not been requested?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "60 minutes",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "30 minutes",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "120 minutes",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "90 minutes",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "question": "An IFR training flight shall be marked in item 8 of the flight plan by using the letters:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "IX",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "IN",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "VN",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "VG",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 229,
     "question": "What is the meaning of the term \"FLIGHT LEVEL\"?",
     "answers": [
@@ -515,6 +5533,1436 @@
       {
         "letter": "D",
         "text": "A level in the atmosphere for vertical separation which is determined by setting the altimeter to local QNH",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "question": "Except for take-off and landing the minimum safe height for IFR-flights is at least:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1000 ft above the highest obstacle located within 8 km of the estimated position of the aircraft",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "500 ft above the highest obstacle located within 8 km of the estimated position of the aircraft",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1500 ft above the highest obstacle located within 8 km of the estimated position of the aircraft",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1000 ft above the highest obstacle located within 5 km of the estimated position of the aircraft",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 231,
+    "question": "The IFR minimum on ATS routes is expressed in:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Altitude and/or flight level",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Flight level only",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Elevation",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Height",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "question": "Within how many miles radius around a specified navigational aid does the minimum sector altitude provide 1000 ft obstacle clearance?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "25 NM",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "30 NM",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "20 NM",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "15 NM Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 46 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "question": "Altitude information of route segments on German enroute charts indicate the …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "minimum IFR cruising altitude",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "minimum safe height for IFR flights",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "lower limit of the controlled airspace",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "minimum reception altitude for radio navigational aids",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "question": "What is the minimum vertical separation to other IFR flights above FL 290?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1000 ft up to FL 410 thereafter 2000 ft",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2000 m",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1000 ft",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "500 ft",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "question": "What is the minimum vertical separation to other IFR flights below FL 410?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1000 ft",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2000 ft",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1000 m",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "500 ft",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "question": "Prior to departure the pilot will be given enroute clearance including the departure route. The cruising altitude is normally not covered by the clearance. To which initial altitude has the pilot to climb after take-off?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "To the initial altitude stated in the SID",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Climb so, as to leave airspace E as soon as possible",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The initial altitude is on pilot‘s discretion",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "To the minimum safe height for IFR flights",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "question": "The transition level is determined on the basis of …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "transition altitude and QNH",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "transition altitude and QFE",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "transition height and QFE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "transition height and QNH",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 238,
+    "question": "The vertical dimension of the transition layer must be at least:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1000 ft",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "1500 ft",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "2000 ft",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "500 ft Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 47 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "question": "The published transition altitude is 5000 ft, the present QNH is 1005 hPa. What is the transition level?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "FL 70",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "FL 50",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "FL 80",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "FL 60",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "question": "The published transition altitude is 5000 ft, the present QNH is 1015 hPa. What is the transition level?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "FL 60",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "FL 50",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "FL 70",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "FL 80",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 241,
+    "question": "The published transition altitude is 5000 ft, the present QNH is 977 hPa. What is the transition level?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "FL 80",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "FL 50",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "FL 70",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "FL 60",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 242,
+    "question": "An IFR flight at FL 100 approaches an aerodrome for landing. The QNH given is 1018 hPa, the transition altitude is 5000 ft. When shall the pilot change the altimeter setting to QNH? When ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "passing FL 60",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "leaving FL 100",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "passing FL 70",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "passing FL 50",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 243,
+    "question": "The pilot of an arriving IFR flight shall change altimeter setting from 1013.2 hPa to QNH during the descent …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "when passing the transition level",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "when passing the transition altitude",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "after having passed the transition layer",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "when commencing descent",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 244,
+    "question": "The pilot of a departing IFR flight shall change altimeter setting from QNH to standard altimeter setting 1013.2 hPa when …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "passing transition altitude",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "passing transition",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "leaving the transition layer",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "reaching transition level Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 48 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 245,
+    "question": "Name the speed limitation applicable within airspace C for an IFR-flight:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "No speed limitation",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Maximum 250 kt IAS",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Maximum 250 kt TAS",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "250 kt lAS below FL 100",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 246,
+    "question": "Which are the lower and upper limits of the German UIR:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "FL 245 - unlimited",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "FL 245 – FL 460",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "GND - unlimited",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "GND - FL 245",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 247,
+    "question": "Flights within airspace E will be separated as follows:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "IFR from IFR",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "IFR from VFR",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "All aircraft",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "VFR from IFR",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 248,
+    "question": "Which kind of flights are not permitted within airspace G?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "IFR outside of RMZ",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Glider flights",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Military exercise flights",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "VFR",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 249,
+    "question": "Flights below FL 100 within airspace D and E are not permitted to exceed an indicated airspeed of ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "250 kt except aircraft, which have to be operated at a higher airspeed because of their specific performance characteristics",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "150 kt",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "300 kt",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "200 kt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 253,
+    "question": "During a flight with an intended change of flight rules the VFR part of this flight shall generally be conducted in such a way, that ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "in airspace E the pilot, has a flight visibility of at least 5 km and the aircraft maintains a horizontal distance from clouds of at least 1500 m and a vertical distance of at least 1000 ft",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "in airspace E the pilot has a flight visibility of at least 8 km and the aircraft maintains a horizontal distance from clouds of at least 1500 m and a vertical distance of at least 1000 ft",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "in airspace E the pilot has a flight visibility of at least 8 km and the aircraft remains clear of cloud",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "in airspace E the pilot has a flight visibility of at least 5 km, the aircraft remains clear of cloud and visual contact to the ground is granted",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 254,
+    "question": "The start-up clearance shall not be requested before it has been ascertained that the aircraft can start the engine after the clearance has been issued ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "within 5 minutes",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "within 10 minutes",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "immediately",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "within 20 minutes",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 255,
+    "question": "For the regulation of taxiing aircraft under all-weather conditions, CAT II/III stop bars have been established ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "for the safety of traffic on taxiways and on runways",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "for the safety of traffic on the runways",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "to ensure a fluent traffic on the apron",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "for the safety of taxiing aircraft",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 257,
+    "question": "When holding in front of a stop bar at a CAT II/III holding point during all-weather operations, a pilot receives a take-off clearance from TWR. The red lights of the stop bar remain switched on. The pilot must ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "inform the TWR that the light signals are not switched off and hold position until the stop bar is switched off",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "be very careful during line-up and take-off, however follow the TWR instruction without delay",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "follow the TWR instruction without arguing, because instructions via radiotelephony overrule light signals",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "disregard the TWR instruction, hold position and wait for weather improvement, because neither take-off nor landing is permitted, as long as the stop bar is switched on",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 258,
+    "question": "The identification with SSR will be achieved by ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "pressing the IDENT button",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "transmitting for DF",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "switching the transponder to STBY",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "heading changes",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 259,
+    "question": "The height identification with SSR will be achieved by ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "squawking mode A/C or S",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "squawking mode A/B",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "squawking LOW-HIGH-LOW",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "transmitting for DF",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 260,
+    "question": "When switching the transponder to \"STBY\" …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "the transponder is immediately available, if required",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "the selected code is transmitting altitude information only",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "the transponder is switched off completely",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "the sensibility of the receiver is reduced",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 261,
+    "question": "If an aircraft has been cleared to land and fails to land within 5 minutes after the estimated landing time and communication cannot be established with the aircraft, ATC will ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "alert the search and rescue service",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "transmit an emergency message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "wait for 5 minutes before taking further action",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "assume that the aircraft is diverting to the alternate aerodrome",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 262,
+    "question": "If an aircraft fails to land within 30 minutes of the estimated time of landing last notified to or estimated by air traffic services units, whichever is later, and communication cannot be established with the aircraft, ATC will ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "declare the uncertainty phase",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "take no special action",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "transmit an urgency message",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "wait another 30 minutes before taking action Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 51 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 263,
+    "question": "If an aircraft fails to arrive within 30 minutes after his ETA and ATC has no knowledge about its position, the following phase will be declared:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Uncertainty phase",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Distress phase",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Emergency phase",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Alert phase",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 264,
+    "question": "Which time will be issued by ATC, if an arriving aircraft on an IFR flight has to hold over the navigation aid serving as clearance limit, when holding of more than 20 minutes is expected? The …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "expected approach time (EAT)",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "estimated time of arrival (ETA)",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "estimated time enroute (ETE)",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "estimated elapsed time (EET)",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 265,
+    "question": "The terminology associated with the standard holding pattern is as follows:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Fix, abeam fix, outbound, holding side, inbound",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Downwind, base leg, final",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Inbound downwind, base outbound, long final",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Hold downwind outbound, turn inbound holding fix",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 266,
+    "question": "The outbound timing in a holding pattern shall begin ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "over or abeam the fix, whichever is later",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "10 seconds before reaching the fix",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "at the convenience of the pilot",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "after having completed the turn over the fix",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 267,
+    "question": "What is the prescribed maximum indicated airspeed for an aircraft entering a holding pattern at FL 140 or below?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "230 kt",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "240 kt",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "265 kt",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "220 kt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 268,
+    "question": "What is the prescribed maximum indicated airspeed for an aircraft entering a holding pattern above FL 200?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "265 kt",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "300 kt",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "230 kt",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "320 kt Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 52 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 269,
+    "question": "What is the outbound timing in a holding pattern up to FL 140?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1 minute",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2 minutes",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1 minute and 30 seconds",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "30 seconds",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 271,
+    "question": "What is the advantage of a VORTAC, compared to a VOR, if the aircraft is equipped with respective receivers?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The airborne equipment indicates distance and direction in respect to the position of the VORTAC",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The airborne equipment indicates direction and altitude/flight level",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The airborne equipment indicates direction and IAS",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The TO/FROM indication can be disregarded",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 272,
+    "question": "The DME receiver provides the pilot with information on …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "distance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "azimuth",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "weather",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "height",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 273,
+    "question": "What is the identification of the MM?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Dots and dashes",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Dashes",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Continuous wave",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Dots",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 274,
+    "question": "The passage of the middle marker is indicated to the pilot by …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "an amber (yellow) light",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "a red light",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "a purple (blue) light",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "a white light Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 53 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 275,
+    "question": "Which is the carrier frequency of the outer marker?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "75 MHz",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "100 MHz",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "50 kHz",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "25 kHz",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 276,
+    "question": "The passage of the outer marker is indicated to the pilot by ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "a purple (blue) light and an aural signal of 400 Hz",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "an amber (yellow) light",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "a 360°-needle-swing of the ADF indicator",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "a white light and an aural signal of 3000 Hz",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 277,
+    "question": "The passage of a locator beacon (LO) is indicated to the pilot by ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "a 180°-needle-swing of the ADF indicator",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "the change of the TO/FROM indicator",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "the flashing of a red light and an aural signal",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "the flashing of a purple light",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 278,
+    "question": "Name all parts of a standard instrument approach procedure:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Arrival route, initial approach, intermediate approach, final approach, missed approach",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Initial approach and final approach",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Final approach and missed approach",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Intermediate approach, final approach and missed approach",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 279,
+    "question": "What are the criteria for the different aircraft categories during an instrument approach?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Speed at threshold based on 1.3 times stall-speed in the landing configuration at maximum certificated landing mass",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Range of speeds for initial approach",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Maximum speeds for missed approach",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Range of final approach speeds",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 280,
+    "question": "Which of the following approaches is a precision approach?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "ILS approach",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "VOR approach",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "ILS back-beam approach",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "DME approach Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 54 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 281,
+    "question": "Which of the following approaches include a vertical guidance?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "ILS approach",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "NDB approach",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "VOR approach",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "LLZ approach",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 282,
+    "question": "Which of the following statements is correct?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A precision approach has a vertical guidance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A precision approach has no vertical guidance",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A LLZ approach has a vertical guidance",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A VOR approach has a vertical guidance",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 283,
+    "question": "Which component of the ILS provides the pilot with electronic course guidance?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Localizer",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Marker beacon",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Approach lighting system",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Glide path",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 284,
+    "question": "Which instrument approach procedure segment leads an aircraft to the extended final approach track?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The initial approach segment",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The final approach segment",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The intermediate approach segment",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The STAR",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 285,
+    "question": "Which information gets a pilot from an air traffic controller during a SRE approach?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Course corrections in regard to runway centre line, distance information and altitude information",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Only headings and altitude information",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Only altitudes and distance information",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Radar vectors only",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 286,
+    "question": "The OCA refers to:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "MSL",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Threshold",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Field elevation",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "QFE Prüfungsfragen im Prüfungsteil \"Kenntnisse\" bei Prüfungen zum Erwerb AZF und AZF E Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page 55 von / of 55",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 287,
+    "question": "What is the Mode S Aircraft Identification?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Call sign according to field 7 of the flight plan",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The registration number of the aircraft",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The name of the aircraft operating agency",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Flight number according to the airline time table",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 288,
+    "question": "What is the transition to final approach?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An overlay to radar vector pattern procedure",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A non-precision approach",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Standard IFR-approach",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A SRE approach",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 289,
+    "question": "What is necessary for the execution for a transition to final approach?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Database",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "ILS",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "ADF",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "VOR/DME",
         "correct": false
       }
     ]
