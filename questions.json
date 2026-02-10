@@ -1,0 +1,522 @@
+[
+  {
+    "id": 1,
+    "question": "Select the correct definition for \"ESTIMATED TIME OF ARRIVAL\" in respect to IFR flights:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The time at which it is estimated that the aircraft will arrive over that designated point defined by reference to navigation aids, from which it is intended, that an instrument approach will be commenced",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The time at which the aircraft will actually arrive over that designated point defined by reference to navigation aids, from which it is intended, that a visual approach will be commenced",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The time at which it is estimated that the aircraft will arrive over that designated point defined by reference to visual aids, from which it is intended, that an approach will be commenced",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "In any case that time at which the aircraft will arrive over the aerodrome",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What does the term \"AERONAUTICAL STATION\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A land station in the aeronautical mobile service. In certain instances, an aeronautical station may be located, for example, on board ship or on a platform at sea",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A station forming part of the aeronautical telecommunication network",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A station in the aeronautical telecommunication service located on land or on board of an aircraft to exchange radiotelephony communications",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Any station established to exchange radiotelephony communications",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What does the term \"BLIND TRANSMISSION\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A Transmission of a message to the air traffic service in cases where radio contact cannot be established",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A transmission of information relating to air navigation that is not addressed to a specific station or stations",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A transmission where no reply is required from the receiving station",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A transmission of messages relating to enroute weather information which may affect the safety of aircraft operations that is not addressed to a specific station or stations",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What does the term \"GENERAL CALL\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Stations in the aeronautical mobile service may simultaneously call all stations maintaining listening watch on a frequency",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A radiotelephony communication from a ground station to aircraft in flight",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A transmission containing meteorological and operational information to aircraft engaged in flights over remote and oceanic areas out of range of VHF ground stations",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A transmission where no reply is required from the receiving station",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What does the term \"AIR-GROUND COMMUNICATION\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Two-way communication between aircraft and stations or locations on the surface of the earth",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "One-way communication from stations or locations on the surface of the earth",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Any communication from aircraft to ground stations requiring handling by the Aeronautical Fixed Telecommunication Network (AFTN)",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "One-way communication from aircraft to stations or locations on the surface of the earth",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What does the term \"EXPECTED APPROACH TIME\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The time at which ATC expects that an arriving aircraft, following a delay, will leave the holding point to complete its approach for a landing",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The time at which an arriving aircraft, upon reaching the radio aid serving the destination aerodrome, will commence the instrument approach procedure for a landing",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The holding time over the radio facility from which the instrument approach procedure for a landing will be initiated",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The time at which an arriving aircraft expects to arrive over the appropriate designated navigation aid serving the destination aerodrome",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "What does the term \"VISUAL APPROACH\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An approach by an IFR flight when either part or all of an instrument approach procedure is not completed and the approach is executed in visual reference to terrain",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "An approach executed by a VFR flight unable to maintain VMC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "An extension of an instrument approach procedure to bring an aircraft into position for landing on a runway which is not suitable located for straight-in approach",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A visual manoeuvre executed by an IFR flight when the weather conditions at the aerodrome of destination are equal to or better than required VMC minima",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What does the term \"CLEARANCE LIMIT\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The point to which an aircraft is granted an air traffic control clearance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The time of expiry of an air traffic control clearance",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The time after which an air traffic control clearance will be automatically cancelled if the flight has not been commenced",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The time at which an aircraft is given an air traffic control clearance",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What does the term \"AUTOMATIC TERMINAL INFORMATION SERVICE\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The automatic provision of current, routine information to arriving and departing aircraft throughout 24 hours or a specified portion thereof",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A service established to provide information concerning enroute weather phenomena which may effect the safety of aircraft operation",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A service which provides aircraft with weather reports relating to a specific number of aerodromes located within a flight information region (FIR)",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A service by which aircraft operating within a flight information region (FIR) are provided with current meteorological and operational information essential for the safety of air navigation",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What does the term \"WAYPOINT\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A specified geographical position used to define an area navigation route or the flight path of an aircraft employing area navigation",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A defined position on an aerodrome used for the calibration of the inertial navigation system",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A general term meaning the taxiway- and the runway-system of an international airport",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A signal indicating the direction of the runway-in-use",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "What does the abbreviation \"INS\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Inertial navigation system",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "International NOTAM service",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "International navigation service",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Instrument navigation system",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "What does the abbreviation \"TCAS\" mean?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Traffic Alert and Collision Avoidance System",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tower Cabin Alarm Stop",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Track Confirmation by Automatic Sources",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Terminal Control and Advisory System",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "If you are requested to report your height, to which Q-code setting would you refer?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "QFE",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "QNH",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "QDM",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "QBI",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "question": "If you are requested to report your altitude, to which Q-code setting would you refer?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "QNH",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "QFF",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "QNJ",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "QFE",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "question": "The phrase \"CANCEL\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Annul the previously transmitted clearance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Consider that transmission as not sent",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A new flight plan has to be filed",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Expect a new clearance shortly",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "question": "The phrase \"ACKNOWLEDGE\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Let me know that you have received and understood this message",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "I have received all of your last transmission",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Repeat all or the following part of your last transmission",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "My transmission is ended and I expect a response from you",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "question": "The phrase \"ROGER\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "I have received all of your last transmission",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A direct answer in the affirmative",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Cleared for take-off or cleared to land",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A direct answer in the negative",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "question": "An aircraft in distress situation shall squawk:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A 7700",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A 7600",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A 7500",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A 6700",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "question": "What is the transponder code for radio communication failure?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "7600",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "6700",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "7700",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "7500",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "question": "What is the meaning of the term \"FLIGHT LEVEL\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A level in the atmosphere for vertical separation which is determined by setting the altimeter to 1013.2 hPa",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "A pressure level based on regional QNH",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "A level in the atmosphere for vertical separation which is determined by setting the altimeter to local QFE",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "A level in the atmosphere for vertical separation which is determined by setting the altimeter to local QNH",
+        "correct": false
+      }
+    ]
+  }
+]

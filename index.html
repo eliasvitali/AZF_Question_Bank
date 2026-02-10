@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZF Exam Study App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✈️ AZF Exam Study App</h1>
+            <p class="subtitle">Allgemeines Sprechfunkzeugnis für den Flugfunkdienst</p>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-label">Progress</div>
+                <div class="stat-value" id="progress">0 / 20</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Correct</div>
+                <div class="stat-value correct" id="correct-count">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Incorrect</div>
+                <div class="stat-value incorrect" id="incorrect-count">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Accuracy</div>
+                <div class="stat-value" id="accuracy">0%</div>
+            </div>
+        </div>
+
+        <div class="question-card" id="question-card">
+            <div class="question-header">
+                <span class="question-number" id="question-number">Question 1 of 20</span>
+                <button class="shuffle-btn" id="shuffle-btn" title="Shuffle answers">🔀</button>
+            </div>
+            <div class="question-text" id="question-text">Loading...</div>
+            <div class="answers" id="answers-container">
+                <!-- Answers will be inserted here -->
+            </div>
+            <div class="feedback" id="feedback" style="display: none;"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-secondary" id="prev-btn" disabled>← Previous</button>
+            <button class="btn btn-primary" id="next-btn" disabled>Next →</button>
+            <button class="btn btn-success" id="finish-btn" style="display: none;">Finish Session</button>
+        </div>
+
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="study-mode-toggle">
+                <span class="slider"></span>
+            </label>
+            <span class="mode-label">
+                <span id="mode-text">Practice Mode</span>
+                <small id="mode-description">(Answers shuffled)</small>
+            </span>
+        </div>
+
+        <div class="results-panel" id="results-panel" style="display: none;">
+            <h2>Session Complete! 🎉</h2>
+            <div class="results-summary">
+                <div class="result-stat">
+                    <div class="result-label">Total Questions</div>
+                    <div class="result-value" id="result-total">20</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-label">Correct</div>
+                    <div class="result-value correct" id="result-correct">0</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-label">Incorrect</div>
+                    <div class="result-value incorrect" id="result-incorrect">0</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-label">Final Score</div>
+                    <div class="result-value" id="result-percentage">0%</div>
+                </div>
+            </div>
+            <div class="results-actions">
+                <button class="btn btn-primary" id="restart-btn">Start New Session</button>
+                <button class="btn btn-secondary" id="review-btn">Review Mistakes</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Study efficiently with randomized questions</p>
+            <p class="note">Note: In the actual exam, answer positions are randomized. This app helps you learn the content, not just memorize positions!</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
