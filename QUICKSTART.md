@@ -22,12 +22,30 @@
 
 The current `questions.json` contains 20 sample questions. To add all 289:
 
-**Option A: Use the Python Script**
-```bash
-python3 extract_questions.py path/to/pdf_text.txt
-```
+**Method 1: Extract from PDF (Recommended)**
 
-**Option B: Manual Addition**
+1. Install the PDF library:
+   ```bash
+   pip install pypdf
+   ```
+
+2. Run the extraction script with your PDF:
+   ```bash
+   python3 extract_questions.py 2024Pruefungsfragen_AZF_pdf.pdf
+   ```
+
+3. Upload the generated `questions.json` to your GitHub repository
+
+**Method 2: Extract from Text File**
+
+1. Copy text from the PDF and save as `azf_document.txt`
+2. Run:
+   ```bash
+   python3 extract_questions.py azf_document.txt
+   ```
+
+**Method 3: Manual Addition**
+
 Edit `questions.json` and add questions in this format:
 ```json
 {
@@ -41,6 +59,8 @@ Edit `questions.json` and add questions in this format:
   ]
 }
 ```
+
+Note: The "letter" field is only used internally. The app reassigns display letters based on shuffled positions.
 
 ### Step 3: Start Studying!
 

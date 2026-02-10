@@ -2,11 +2,87 @@
 """
 AZF Question Extractor
 Extracts all questions from the AZF exam PDF document into questions.json format
+
+Usage:
+    python3 extract_questions.py <input_file.pdf> [output_file.json]
+
+Example:
+    python3 extract_questions.py 2024Pruefungsfragen_AZF_pdf.pdf questions.json
+
+Requirements:
+    pip install pypdf
+    (or: pip install PyPDF2)
 """
 
 import json
 import re
 import sys
+import os
+
+# Try to import PDF library
+PDF_LIBRARY = None
+try:
+    import pypdf
+    PDF_LIBRARY = 'pypdf'
+except ImportError:
+    try:
+        import PyPDF2
+        PDF_LIBRARY = 'PyPDF2'
+    except ImportError:
+        pass
+
+if PDF_LIBRARY is None:
+    print("Error: No PDF library is installed.")
+    print("Please install one with:")
+    print("  pip install pypdf")
+    print("  or: pip install PyPDF2")
+    print()
+    print("After installing, you can extract questions from PDF files directly.")
+    print("Alternatively, you can provide a .txt file with the extracted text.")
+    # Don't exit - allow text file processing
+    PDF_AVAILABLE = False
+else:
+    PDF_AVAILABLE = True
+    print(f"Using PDF library: {PDF_LIBRARY}")
+
+def read_pdf_file(pdf_path):
+    """
+    Extract text from a PDF file using available PDF library.
+    
+    Args:
+        pdf_path: Path to the PDF file
+        
+    Returns:
+        Extracted text as a string
+    """
+    if not PDF_AVAILABLE:
+        print("Error: Cannot read PDF files - no PDF library installed")
+        print("Please install: pip install pypdf")
+        return None
+    
+    try:
+        with open(pdf_path, 'rb') as file:
+            if PDF_LIBRARY == 'pypdf':
+                pdf_reader = pypdf.PdfReader(file)
+            else:  # PyPDF2
+                pdf_reader = PyPDF2.PdfReader(file)
+            
+            print(f"   PDF has {len(pdf_reader.pages)} pages")
+            print("   Extracting text...")
+            
+            text = ""
+            for i, page in enumerate(pdf_reader.pages):
+                page_text = page.extract_text()
+                text += page_text + "\n"
+                if (i + 1) % 10 == 0:
+                    print(f"   Processed {i + 1} pages...")
+            
+            print(f"   Extraction complete!")
+            return text
+    except Exception as e:
+        print(f"Error reading PDF: {e}")
+        return None
+
 
 def parse_azf_document(text):
     """
@@ -110,22 +186,65 @@ def parse_azf_document(text):
 def main():
     print("AZF Question Extractor")
     print("=" * 50)
-    print()
-    
-    # Check if document text is provided
-    if len(sys.argv) > 1:
-        input_file = sys.argv[1]
-        print(f"Reading from file: {input_file}")
-        with open(input_file, 'r', encoding='utf-8') as f:
-            document_text = f.read()
+    if PDF_AVAILABLE:
+        print(f"PDF support: ✓ ({PDF_LIBRARY})")
     else:
-        print("Reading from stdin...")
-        print("Paste the document text and press Ctrl+D (Unix) or Ctrl+Z (Windows) when done:")
+        print("PDF support: ✗ (text files only)")
+    print()
+    
+    # Check if input file is provided
+    if len(sys.argv) < 2:
+        print("Error: Please provide an input file")
         print()
-        document_text = sys.stdin.read()
+        print("Usage:")
+        print(f"  python3 {sys.argv[0]} <input_file.pdf> [output_file.json]")
+        print(f"  python3 {sys.argv[0]} <input_file.txt> [output_file.json]")
+        print()
+        print("Example:")
+        print(f"  python3 {sys.argv[0]} 2024Pruefungsfragen_AZF_pdf.pdf")
+        print(f"  python3 {sys.argv[0]} azf_document.txt my_questions.json")
+        print()
+        print("The script accepts both PDF files and text files.")
+        if not PDF_AVAILABLE:
+            print("Note: Install 'pypdf' to enable PDF support: pip install pypdf")
+        print("If no output file is specified, 'questions.json' will be used.")
+        return 1
+    
+    input_file = sys.argv[1]
+    output_file = sys.argv[2] if len(sys.argv) > 2 else 'questions.json'
+    
+    # Check if input file exists
+    if not os.path.exists(input_file):
+        print(f"Error: File '{input_file}' not found")
+        return 1
+    
+    # Determine file type and read content
+    file_ext = os.path.splitext(input_file)[1].lower()
+    
+    try:
+        if file_ext == '.pdf':
+            if not PDF_AVAILABLE:
+                print("Error: Cannot read PDF files - no PDF library installed")
+                print("Please install: pip install pypdf")
+                print("Or convert your PDF to text and provide a .txt file")
+                return 1
+            print(f"📄 Reading PDF file: {input_file}")
+            document_text = read_pdf_file(input_file)
+            if document_text is None:
+                return 1
+        else:
+            # Assume text file
+            print(f"📄 Reading text file: {input_file}")
+            with open(input_file, 'r', encoding='utf-8') as f:
+                document_text = f.read()
+        
+        print(f"   Extracted {len(document_text)} characters")
+    except Exception as e:
+        print(f"Error reading file: {e}")
+        return 1
     
     print()
-    print("Parsing document...")
+    print("🔍 Parsing document...")
     print()
     
     # Extract questions
@@ -133,21 +252,34 @@ def main():
     
     print()
     print("=" * 50)
-    print(f"Extraction complete: {len(questions)} questions found")
+    print(f"✅ Extraction complete: {len(questions)} questions found")
     print()
     
     # Save to JSON
-    output_file = 'questions.json'
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(questions, f, indent=2, ensure_ascii=False)
+    try:
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(questions, f, indent=2, ensure_ascii=False)
+        
+        print(f"💾 Saved to: {output_file}")
+        print(f"   File size: {os.path.getsize(output_file)} bytes")
+    except Exception as e:
+        print(f"Error saving file: {e}")
+        return 1
     
-    print(f"✓ Saved to {output_file}")
     print()
     
     # Show sample
     if questions:
-        print("Sample question:")
-        print(json.dumps(questions[0], indent=2, ensure_ascii=False))
+        print("📋 Sample question:")
+        print("-" * 50)
+        sample = questions[0]
+        print(f"ID: {sample['id']}")
+        print(f"Q:  {sample['question'][:100]}...")
+        print(f"A:  {sample['answers'][0]['text'][:60]}... [correct]")
+        print("-" * 50)
+    
+    print()
+    print(f"🎉 Done! You can now use {output_file} in your study app.")
     
     return 0
 

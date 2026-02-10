@@ -32,6 +32,15 @@ An interactive study application for the AZF (Allgemeines Sprechfunkzeugnis für
 2. Open `index.html` in your web browser
 3. Start studying!
 
+### Important: How Answer Letters Work
+
+In the `questions.json` file, the correct answer is always marked with `"correct": true` and is typically in the "A" position in the data. **However, in the app:**
+
+- **Practice Mode**: Answers are shuffled and display letters A-D are assigned based on their position after shuffling
+- **Study Mode**: Answers stay in original order with A-D assigned by position
+
+This means the letter "A" you see in the app may not be the same as the letter "A" in the JSON file - the app reassigns letters based on display position. This prevents you from memorizing "A is always correct" and forces you to actually read and understand each answer.
+
 ## Files Included
 
 - `index.html` - Main application page
@@ -60,18 +69,70 @@ The current `questions.json` contains a sample of 20 questions. To add more ques
 }
 ```
 
-**Important**: The correct answer should ALWAYS have `"correct": true` and should ALWAYS be in the "A" position in the JSON file. The app will shuffle them during practice mode.
+**Important**: In the JSON file, keep the correct answer with `"correct": true`. The `"letter"` field is only used internally - the app will reassign display letters A-D based on the shuffled position, so users can't just memorize "A is always correct."
 
 ## Extracting All Questions from PDF
 
-A Python script is included to help extract all 289 questions from the official PDF:
+The included Python script can extract all 289 questions **directly from the PDF file**:
 
-```python
-# See extract_questions.py for the parser
-python3 extract_questions.py
+### Quick Start
+
+```bash
+# Install PDF library (if needed)
+pip install pypdf
+
+# Extract questions from PDF
+python3 extract_questions.py 2024Pruefungsfragen_AZF_pdf.pdf
 ```
 
-You'll need to paste the full document text into the script to extract all questions.
+That's it! The script will create `questions.json` with all 289 questions.
+
+### Detailed Usage
+
+```
+python3 extract_questions.py <input_file> [output_file.json]
+
+Arguments:
+  input_file       - PDF file (.pdf) or text file (.txt) with AZF exam questions
+  output_file.json - Output JSON file (default: questions.json)
+
+Examples:
+  # Extract from PDF
+  python3 extract_questions.py 2024Pruefungsfragen_AZF_pdf.pdf
+  
+  # Extract from PDF with custom output name
+  python3 extract_questions.py 2024Pruefungsfragen_AZF_pdf.pdf all_questions.json
+  
+  # Extract from text file (if you prefer)
+  python3 extract_questions.py azf_document.txt
+```
+
+### What the Script Does
+
+The script will:
+- ✅ Read PDF files directly (or text files)
+- ✅ Extract all pages and parse questions
+- ✅ Identify question numbers (1-289)
+- ✅ Extract question text and all 4 answers
+- ✅ Mark the correct answer (A in source)
+- ✅ Generate properly formatted JSON
+- ✅ Show progress and statistics
+
+### Installation
+
+The script requires the `pypdf` library:
+
+```bash
+pip install pypdf
+```
+
+Or alternatively:
+
+```bash
+pip install PyPDF2
+```
+
+The script will work with either library.
 
 ## Tips for Effective Study
 

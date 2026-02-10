@@ -96,6 +96,9 @@ class StudyApp {
         const answersContainer = document.getElementById('answers-container');
         answersContainer.innerHTML = '';
         
+        // Display letters based on position (A, B, C, D) not original letter
+        const displayLetters = ['A', 'B', 'C', 'D'];
+        
         this.currentAnswerOrder.forEach((answer, index) => {
             const answerDiv = document.createElement('div');
             answerDiv.className = 'answer-option';
@@ -103,7 +106,7 @@ class StudyApp {
             answerDiv.dataset.index = index;
             
             answerDiv.innerHTML = `
-                <span class="answer-letter">${answer.letter}</span>
+                <span class="answer-letter">${displayLetters[index]}</span>
                 <span class="answer-text">${answer.text}</span>
             `;
             
@@ -130,6 +133,9 @@ class StudyApp {
         const selectedAnswer = this.currentAnswerOrder[index];
         const isCorrect = selectedAnswer.correct;
         
+        // Display letters based on position
+        const displayLetters = ['A', 'B', 'C', 'D'];
+        
         // Mark all as disabled
         answerOptions.forEach(option => option.classList.add('disabled'));
         
@@ -137,9 +143,11 @@ class StudyApp {
         answerOptions[index].classList.add('selected');
         
         // Show correct/incorrect
+        let correctIndex = -1;
         answerOptions.forEach((option, i) => {
             if (this.currentAnswerOrder[i].correct) {
                 option.classList.add('correct');
+                correctIndex = i;
             } else if (i === index && !isCorrect) {
                 option.classList.add('incorrect');
             }
@@ -155,8 +163,7 @@ class StudyApp {
             this.sessionStats.correct++;
         } else {
             feedback.className = 'feedback incorrect';
-            const correctAnswer = this.currentAnswerOrder.find(a => a.correct);
-            feedback.textContent = `❌ Incorrect. The correct answer is ${correctAnswer.letter}.`;
+            feedback.textContent = `❌ Incorrect. The correct answer is ${displayLetters[correctIndex]}.`;
             this.sessionStats.incorrect++;
         }
         
@@ -164,8 +171,8 @@ class StudyApp {
         this.sessionStats.answered[this.currentQuestionIndex] = {
             questionId: this.questions[this.currentQuestionIndex].id,
             correct: isCorrect,
-            selectedAnswer: selectedAnswer.letter,
-            correctAnswer: this.currentAnswerOrder.find(a => a.correct).letter
+            selectedAnswer: displayLetters[index],
+            correctAnswer: displayLetters[correctIndex]
         };
         
         // Enable next button
