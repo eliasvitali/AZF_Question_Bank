@@ -155,6 +155,68 @@ The script will show warnings for any skipped questions.
 
 ---
 
+## Understanding the Extraction Log
+
+The script creates an extraction log file (e.g., `questions_extraction_log.txt`) that contains:
+
+### What's in the Log
+
+1. **Summary Statistics**
+   - Total questions extracted
+   - Questions skipped
+   - Expected vs actual count
+
+2. **Skipped Questions**
+   - Question ID
+   - Reason for skipping (e.g., "found 3 answers instead of 4")
+   - What was found (question text, number of answers)
+
+3. **Missing Question IDs**
+   - Complete list of question numbers not found
+   - Helps identify gaps in extraction
+
+### Example Log Output
+
+```
+AZF Question Extraction Log
+==================================================
+
+Total questions extracted: 268
+Questions skipped: 21
+Expected total: 289
+Missing: 21
+
+Skipped Questions:
+--------------------------------------------------
+Question 45: found 3 answers instead of 4
+  - Has question text: True
+  - Answers found: 3/4
+
+Question 127: no question text, found 2 answers instead of 4
+  - Has question text: False
+  - Answers found: 2/4
+
+Missing Question IDs:
+--------------------------------------------------
+[45, 67, 89, 127, 156, ...]
+
+Total missing: 21
+```
+
+### What to Do About Missing Questions
+
+If questions are missing:
+
+1. **Check the log** - See which specific questions failed and why
+2. **Review the PDF** - Look at those question numbers in the original PDF
+3. **Common issues**:
+   - Formatting differences (tables, special characters)
+   - Page breaks in the middle of questions
+   - Multi-line answers that confused the parser
+4. **Manual addition** - Add missing questions manually to `questions.json`
+
+---
+
 ## Verifying the Output
 
 After extraction, check the generated `questions.json`:

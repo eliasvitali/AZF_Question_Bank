@@ -99,23 +99,57 @@ class StudyApp {
         // Display letters based on position (A, B, C, D) not original letter
         const displayLetters = ['A', 'B', 'C', 'D'];
         
+        // Check if this question was already answered
+        const previousAnswer = this.sessionStats.answered[this.currentQuestionIndex];
+        const isAlreadyAnswered = previousAnswer !== undefined;
+        
         this.currentAnswerOrder.forEach((answer, index) => {
             const answerDiv = document.createElement('div');
             answerDiv.className = 'answer-option';
             answerDiv.dataset.correct = answer.correct;
             answerDiv.dataset.index = index;
             
+            // If already answered, mark as disabled
+            if (isAlreadyAnswered) {
+                answerDiv.classList.add('disabled');
+                
+                // Show which was selected and which is correct
+                if (previousAnswer.selectedAnswer === displayLetters[index]) {
+                    answerDiv.classList.add('selected');
+                    if (!previousAnswer.correct) {
+                        answerDiv.classList.add('incorrect');
+                    }
+                }
+                if (answer.correct) {
+                    answerDiv.classList.add('correct');
+                }
+            }
+            
             answerDiv.innerHTML = `
                 <span class="answer-letter">${displayLetters[index]}</span>
                 <span class="answer-text">${answer.text}</span>
             `;
             
-            answerDiv.addEventListener('click', () => this.selectAnswer(index));
+            if (!isAlreadyAnswered) {
+                answerDiv.addEventListener('click', () => this.selectAnswer(index));
+            }
             answersContainer.appendChild(answerDiv);
         });
         
-        // Hide feedback
-        document.getElementById('feedback').style.display = 'none';
+        // Show/hide feedback based on whether question was answered
+        const feedback = document.getElementById('feedback');
+        if (isAlreadyAnswered) {
+            feedback.style.display = 'block';
+            if (previousAnswer.correct) {
+                feedback.className = 'feedback correct';
+                feedback.textContent = '✅ Correct! Well done!';
+            } else {
+                feedback.className = 'feedback incorrect';
+                feedback.textContent = `❌ Incorrect. The correct answer is ${previousAnswer.correctAnswer}.`;
+            }
+        } else {
+            feedback.style.display = 'none';
+        }
         
         // Update navigation buttons
         this.updateNavigationButtons();
@@ -125,7 +159,12 @@ class StudyApp {
         const answersContainer = document.getElementById('answers-container');
         const answerOptions = answersContainer.querySelectorAll('.answer-option');
         
-        // Check if already answered
+        // Check if already answered - this question shouldn't be answerable again
+        if (this.sessionStats.answered[this.currentQuestionIndex] !== undefined) {
+            return;
+        }
+        
+        // Check if any option is disabled (shouldn't happen, but safety check)
         if (answerOptions[0].classList.contains('disabled')) {
             return;
         }
@@ -167,7 +206,7 @@ class StudyApp {
             this.sessionStats.incorrect++;
         }
         
-        // Record answer
+        // Record answer (this prevents re-answering)
         this.sessionStats.answered[this.currentQuestionIndex] = {
             questionId: this.questions[this.currentQuestionIndex].id,
             correct: isCorrect,

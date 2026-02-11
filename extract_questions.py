@@ -98,6 +98,7 @@ def parse_azf_document(text):
     """
     
     questions = []
+    skipped_questions = []
     
     # Split by question numbers
     # Pattern: newline followed by digit(s) and space
@@ -174,13 +175,32 @@ def parse_azf_document(text):
                 })
                 print(f"✓ Extracted question {q_num}")
             else:
-                print(f"⚠ Skipped question {q_num} (incomplete: {len(answers)} answers)")
+                reason = []
+                if not question_text:
+                    reason.append("no question text")
+                if len(answers) != 4:
+                    reason.append(f"found {len(answers)} answers instead of 4")
+                
+                reason_str = ", ".join(reason)
+                skipped_questions.append({
+                    'id': q_num,
+                    'reason': reason_str,
+                    'answers_found': len(answers),
+                    'has_question': bool(question_text)
+                })
+                print(f"⚠ Skipped question {q_num} ({reason_str})")
         
         except Exception as e:
             print(f"✗ Error processing question block: {e}")
+            skipped_questions.append({
+                'id': q_num if 'q_num' in locals() else 'unknown',
+                'reason': f"Exception: {str(e)}",
+                'answers_found': 0,
+                'has_question': False
+            })
             continue
     
-    return questions
+    return questions, skipped_questions
 
 
 def main():
@@ -248,11 +268,18 @@ def main():
     print()
     
     # Extract questions
-    questions = parse_azf_document(document_text)
+    questions, skipped_questions = parse_azf_document(document_text)
     
     print()
     print("=" * 50)
     print(f"✅ Extraction complete: {len(questions)} questions found")
+    
+    # Report on expected vs actual
+    expected_total = 289
+    if len(questions) < expected_total:
+        missing_count = expected_total - len(questions)
+        print(f"⚠️  Warning: {missing_count} questions missing (expected {expected_total})")
+    
     print()
     
     # Save to JSON
@@ -265,6 +292,42 @@ def main():
     except Exception as e:
         print(f"Error saving file: {e}")
         return 1
+    
+    # Save extraction log
+    log_file = output_file.replace('.json', '_extraction_log.txt')
+    try:
+        with open(log_file, 'w', encoding='utf-8') as f:
+            f.write("AZF Question Extraction Log\n")
+            f.write("=" * 50 + "\n\n")
+            f.write(f"Total questions extracted: {len(questions)}\n")
+            f.write(f"Questions skipped: {len(skipped_questions)}\n")
+            f.write(f"Expected total: {expected_total}\n")
+            f.write(f"Missing: {expected_total - len(questions)}\n\n")
+            
+            if skipped_questions:
+                f.write("Skipped Questions:\n")
+                f.write("-" * 50 + "\n")
+                for skip in skipped_questions:
+                    f.write(f"Question {skip['id']}: {skip['reason']}\n")
+                    f.write(f"  - Has question text: {skip['has_question']}\n")
+                    f.write(f"  - Answers found: {skip['answers_found']}/4\n")
+                    f.write("\n")
+            
+            # Find missing question IDs
+            extracted_ids = set(q['id'] for q in questions)
+            expected_ids = set(range(1, expected_total + 1))
+            missing_ids = expected_ids - extracted_ids
+            
+            if missing_ids:
+                f.write("\nMissing Question IDs:\n")
+                f.write("-" * 50 + "\n")
+                missing_list = sorted(list(missing_ids))
+                f.write(f"{missing_list}\n\n")
+                f.write(f"Total missing: {len(missing_list)}\n")
+        
+        print(f"📋 Extraction log saved to: {log_file}")
+    except Exception as e:
+        print(f"Warning: Could not save log file: {e}")
     
     print()
     
@@ -279,6 +342,13 @@ def main():
         print("-" * 50)
     
     print()
+    
+    # Show summary
+    if skipped_questions:
+        print(f"⚠️  {len(skipped_questions)} question(s) were skipped during extraction")
+        print(f"   Check {log_file} for details")
+        print()
+    
     print(f"🎉 Done! You can now use {output_file} in your study app.")
     
     return 0

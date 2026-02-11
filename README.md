@@ -117,6 +117,18 @@ The script will:
 - ✅ Mark the correct answer (A in source)
 - ✅ Generate properly formatted JSON
 - ✅ Show progress and statistics
+- ✅ Create extraction log showing any missing/skipped questions
+- ✅ Report which questions couldn't be extracted and why
+
+### Extraction Log
+
+The script automatically creates an extraction log file (e.g., `questions_extraction_log.txt`) that shows:
+- Total questions extracted
+- Questions that were skipped and why
+- Complete list of missing question IDs
+- Detailed reasons for each skipped question
+
+This helps you identify which questions may need manual review.
 
 ### Installation
 
