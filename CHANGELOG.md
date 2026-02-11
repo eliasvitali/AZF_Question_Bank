@@ -1,5 +1,78 @@
 # Changelog - Bug Fixes
 
+## Version 1.3 - Critical Parsing Fixes
+
+### Fixed Issues
+
+#### 5. ✅ Questions Starting with "A" (Critical Parsing Bug) 
+
+**Problem:**
+- Questions starting with indefinite article "A" were misidentified as answers
+- Examples: "A pilot intends...", "A station forming..."
+- Parser saw "A " at start and thought it was answer A
+- Caused complete parsing failure for these questions
+
+**Example of Broken Parsing:**
+```
+Question: "A pilot intends to fly IFR. What should he do?"
+Answer A: "File a flight plan"
+
+Parser incorrectly thought:
+- "A pilot intends..." was Answer A
+- "A File a flight plan" was Answer A (duplicate!)
+- Result: "found 5 answers instead of 4"
+```
+
+**Solution:**
+- Implemented smart ABCD sequence detection
+- Checks if suspected "Answer A" ends with "?" (indicates question)
+- Compares line lengths: if "A" is 2x longer than B/C/D average, it's likely a question
+- Only locks onto ABCD pattern when it looks like real answers, not questions
+
+**Testing:**
+```
+✅ "A pilot intends to fly..." - correctly identified as question
+✅ "A station forming part..." - correctly identified as question  
+✅ All 3 test cases extracted perfectly
+```
+
+---
+
+#### 6. ✅ CSV Export Added (New Feature)
+
+**Problem:**
+- Only JSON output was available
+- Hard to review/edit questions in spreadsheet software
+- No easy way to share questions with non-technical users
+
+**Solution:**
+- Automatic CSV export alongside JSON
+- Format: ID, Question, Answer A (Correct), Answer B, Answer C, Answer D
+- Opens perfectly in Excel, Google Sheets, LibreOffice
+- Easy to review, edit, and share
+
+**Usage:**
+```bash
+python3 extract_questions.py input.pdf
+# Creates:
+# - questions.json (for the app)
+# - questions.csv (for review/editing)
+```
+
+**CSV Format:**
+```csv
+ID,Question,Answer A (Correct),Answer B,Answer C,Answer D
+1,"What is...",Correct answer,Wrong,Wrong,Wrong
+```
+
+**Benefits:**
+- Quick visual review of all questions
+- Easy editing in spreadsheet
+- Share with instructors/reviewers
+- Import into other systems
+
+---
+
 ## Version 1.2 - Additional Extraction Improvements
 
 ### Fixed Issues

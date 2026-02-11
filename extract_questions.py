@@ -18,6 +18,7 @@ import json
 import re
 import sys
 import os
+import csv
 
 # Try to import PDF library
 PDF_LIBRARY = None
@@ -44,6 +45,38 @@ if PDF_LIBRARY is None:
 else:
     PDF_AVAILABLE = True
     print(f"Using PDF library: {PDF_LIBRARY}")
+
+def save_to_csv(questions, csv_file):
+    """
+    Save questions to CSV format for easy viewing/editing in spreadsheet software.
+    
+    CSV Format:
+    ID, Question, Answer A (Correct), Answer B, Answer C, Answer D
+    """
+    try:
+        with open(csv_file, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            
+            # Write header
+            writer.writerow(['ID', 'Question', 'Answer A (Correct)', 'Answer B', 'Answer C', 'Answer D'])
+            
+            # Write questions
+            for q in questions:
+                row = [
+                    q['id'],
+                    q['question'],
+                    q['answers'][0]['text'],  # A (correct)
+                    q['answers'][1]['text'],  # B
+                    q['answers'][2]['text'],  # C
+                    q['answers'][3]['text']   # D
+                ]
+                writer.writerow(row)
+        
+        return True
+    except Exception as e:
+        print(f"Error saving CSV: {e}")
+        return False
+
 
 def read_pdf_file(pdf_path):
     """
@@ -109,11 +142,16 @@ def parse_azf_document(text):
     text = re.sub(r'Prüfungsfragen im Prüfungsteil.*?(?=\n|$)', '', text, flags=re.IGNORECASE)
     
     # Split by question numbers
-    # Pattern: newline followed by digit(s) and space
-    parts = re.split(r'\n(\d+)\s+', text)
+    # Pattern: question number at start of line or after newline
+    parts = re.split(r'(?:^|\n)(\d+)\s+', text)
     
     # Process each question block
-    for i in range(1, len(parts), 2):
+    # parts[0] might be empty or contain preamble, skip it
+    # Then pairs: parts[1]=q_num, parts[2]=q_block, parts[3]=q_num, parts[4]=q_block...
+    
+    start_idx = 1 if parts[0].strip() == '' or not parts[0].strip()[0].isdigit() else 0
+    
+    for i in range(start_idx, len(parts), 2):
         if i + 1 >= len(parts):
             break
         
@@ -132,29 +170,73 @@ def parse_azf_document(text):
             lines = [line for line in lines if not re.match(r'^(Seite|page|\d+\s*/\s*\d+)', line, re.IGNORECASE)]
             
             # Separate question text from answers
+            # First, identify where answers start by finding A B C D sequence
             question_lines = []
-            answer_lines = []
-            in_answers = False
+            answer_start_idx = -1
             
-            for line in lines:
+            # Look for the start of the answer block (should be A, then B, then C, then D in that order)
+            # But we need to be careful: if the question starts with "A ", we might match it by mistake
+            for idx, line in enumerate(lines):
                 # Skip header/footer lines
-                if re.match(r'(Stand|richtige|correct|Prüfungsfragen)', line, re.IGNORECASE):
+                if re.match(r'(Stand|richtige|correct|Prüfungsfragen|Seite|page)', line, re.IGNORECASE):
                     continue
+                
+                # Check if this could be answer A
+                if re.match(r'^A\s+\S', line):
+                    # Look for B, C, D in the next lines (in order, allowing some gaps)
+                    found_letters = [('A', idx, line)]  # We found A
+                    search_for = ['B', 'C', 'D']
                     
-                # Check if this line starts with A, B, C, or D followed by space
-                if re.match(r'^[ABCD]\s+', line):
-                    in_answers = True
-                    answer_lines.append(line)
-                elif in_answers:
-                    # If we see another answer letter, it's a new answer
-                    if re.match(r'^[ABCD]\s+', line):
-                        answer_lines.append(line)
-                    else:
-                        # Continuation of previous answer (unless it's footer junk)
-                        if not re.match(r'(Stand|richtige|correct|Seite|page)', line, re.IGNORECASE):
-                            answer_lines.append(line)
-                else:
-                    question_lines.append(line)
+                    # Look ahead in next 20 lines max
+                    for lookahead_idx in range(idx + 1, min(idx + 20, len(lines))):
+                        lookahead_line = lines[lookahead_idx]
+                        
+                        # Skip footer lines
+                        if re.match(r'(Stand|richtige|correct|Seite|page)', lookahead_line, re.IGNORECASE):
+                            continue
+                        
+                        # Check if this line starts with the next letter we're looking for
+                        if search_for and re.match(rf'^{search_for[0]}\s+\S', lookahead_line):
+                            found_letters.append((search_for[0], lookahead_idx, lookahead_line))
+                            search_for.pop(0)  # Remove this letter from search list
+                            
+                            # If we found all four letters (A, B, C, D), check if this looks valid
+                            if len(found_letters) == 4:
+                                # Check if this looks like a real answer block:
+                                # 1. The "A" line shouldn't be dramatically longer than B/C/D (indicating it's a question)
+                                # 2. The "A" line shouldn't end with a question mark
+                                a_line = found_letters[0][2]
+                                b_line = found_letters[1][2]
+                                c_line = found_letters[2][2]
+                                d_line = found_letters[3][2]
+                                
+                                avg_bcd_len = (len(b_line) + len(c_line) + len(d_line)) / 3
+                                a_len = len(a_line)
+                                
+                                # If A is more than 2x the average of B/C/D, it's probably a question
+                                # Or if A ends with '?', it's definitely a question
+                                if a_line.rstrip().endswith('?') or a_len > avg_bcd_len * 2:
+                                    # This A is probably part of the question, keep looking
+                                    found_letters = []
+                                    search_for = ['B', 'C', 'D']
+                                    continue
+                                
+                                # This looks like a valid answer block
+                                answer_start_idx = idx
+                                break
+                    
+                    if answer_start_idx >= 0:
+                        break  # Found the answer block, stop searching
+            
+            # Split into question and answers based on where we found the answer block
+            if answer_start_idx >= 0:
+                question_lines = [lines[i] for i in range(answer_start_idx) 
+                                 if not re.match(r'(Stand|richtige|correct|Prüfungsfragen|Seite|page)', lines[i], re.IGNORECASE)]
+                answer_lines = lines[answer_start_idx:]
+            else:
+                # No clear answer block found - this is a problem
+                question_lines = lines  # Put everything in question for now
+                answer_lines = []
             
             # Build question text
             question_text = ' '.join(question_lines).strip()
@@ -164,6 +246,7 @@ def parse_azf_document(text):
             current_answer = None
             
             for line in answer_lines:
+                # Match ONLY if line starts with letter, space, then actual content
                 match = re.match(r'^([ABCD])\s+(.+)', line)
                 if match:
                     # Save previous answer
@@ -178,7 +261,7 @@ def parse_azf_document(text):
                         'text': text_part,
                         'correct': letter == 'A'  # A is always correct
                     }
-                elif current_answer:
+                elif current_answer and line.strip():
                     # Continue current answer text (skip if it's header/footer)
                     if not re.match(r'(Stand|richtige|correct|Seite|page)', line, re.IGNORECASE):
                         current_answer['text'] += ' ' + line
@@ -321,8 +404,16 @@ def main():
         print(f"💾 Saved to: {output_file}")
         print(f"   File size: {os.path.getsize(output_file)} bytes")
     except Exception as e:
-        print(f"Error saving file: {e}")
+        print(f"Error saving JSON file: {e}")
         return 1
+    
+    # Save to CSV
+    csv_file = output_file.replace('.json', '.csv')
+    if save_to_csv(questions, csv_file):
+        print(f"📊 CSV saved to: {csv_file}")
+        print(f"   File size: {os.path.getsize(csv_file)} bytes")
+    else:
+        print(f"⚠️  Warning: Could not save CSV file")
     
     # Save extraction log
     log_file = output_file.replace('.json', '_extraction_log.txt')

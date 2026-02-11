@@ -1,7 +1,5 @@
 # AZF Exam Study App ✈️
 
-CAUTION: THIS APP IS ENTIRELY 100% VIBE CODED WITH CLAUDE. IT'S FOR MY OWN PERSONAL USE AS A STUDY TOOL, IT IS NOT GUARANTEED TO HELP YOU IN ANY WAY. THE REPO IS ONLY PUBLIC SO THAT I CAN USE GITHUB PAGES FOR FREE.
-
 An interactive study application for the AZF (Allgemeines Sprechfunkzeugnis für den Flugfunkdienst) aviation radio examination.
 
 ## Features
@@ -117,10 +115,16 @@ The script will:
 - ✅ Identify question numbers (1-289)
 - ✅ Extract question text and all 4 answers
 - ✅ Mark the correct answer (A in source)
-- ✅ Generate properly formatted JSON
+- ✅ Generate properly formatted JSON for the app
+- ✅ Generate CSV file for easy review in Excel/Sheets
 - ✅ Show progress and statistics
 - ✅ Create extraction log showing any missing/skipped questions
 - ✅ Report which questions couldn't be extracted and why
+
+The script creates three files:
+1. **questions.json** - For the study app
+2. **questions.csv** - For review/editing in spreadsheet software
+3. **questions_extraction_log.txt** - Detailed extraction report
 
 ### Extraction Log
 
