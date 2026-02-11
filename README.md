@@ -1,5 +1,7 @@
 # AZF Exam Study App ✈️
 
+CAUTION: THIS APP IS ENTIRELY 100% VIBE CODED WITH CLAUDE. IT'S FOR MY OWN PERSONAL USE AS A STUDY TOOL, IT IS NOT GUARANTEED TO HELP YOU IN ANY WAY. THE REPO IS ONLY PUBLIC SO THAT I CAN USE GITHUB PAGES FOR FREE.
+
 An interactive study application for the AZF (Allgemeines Sprechfunkzeugnis für den Flugfunkdienst) aviation radio examination.
 
 ## Features
