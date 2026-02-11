@@ -100,6 +100,14 @@ def parse_azf_document(text):
     questions = []
     skipped_questions = []
     
+    # Clean up the text first - remove footers
+    # Footer pattern: "Stand / As at:: 2024" or similar
+    text = re.sub(r'Stand / As at::.*?(?=\n|$)', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'richtige Antwort immer A /.*?(?=\n|$)', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'correct answer always A.*?(?=\n|$)', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'Seite / page \d+ von / of \d+', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'Prüfungsfragen im Prüfungsteil.*?(?=\n|$)', '', text, flags=re.IGNORECASE)
+    
     # Split by question numbers
     # Pattern: newline followed by digit(s) and space
     parts = re.split(r'\n(\d+)\s+', text)
@@ -113,8 +121,15 @@ def parse_azf_document(text):
             q_num = int(parts[i].strip())
             q_block = parts[i + 1]
             
-            # Split into lines
+            # Additional cleanup for this block - remove any remaining footer fragments
+            q_block = re.sub(r'Stand / As at::.*', '', q_block, flags=re.IGNORECASE | re.DOTALL)
+            q_block = re.sub(r'Seite / page.*', '', q_block, flags=re.IGNORECASE)
+            
+            # Split into lines and clean
             lines = [line.strip() for line in q_block.split('\n') if line.strip()]
+            
+            # Remove any lines that are just page numbers or headers
+            lines = [line for line in lines if not re.match(r'^(Seite|page|\d+\s*/\s*\d+)', line, re.IGNORECASE)]
             
             # Separate question text from answers
             question_lines = []
@@ -122,17 +137,22 @@ def parse_azf_document(text):
             in_answers = False
             
             for line in lines:
+                # Skip header/footer lines
+                if re.match(r'(Stand|richtige|correct|Prüfungsfragen)', line, re.IGNORECASE):
+                    continue
+                    
                 # Check if this line starts with A, B, C, or D followed by space
                 if re.match(r'^[ABCD]\s+', line):
                     in_answers = True
                     answer_lines.append(line)
                 elif in_answers:
-                    # Continue current answer or start new one
+                    # If we see another answer letter, it's a new answer
                     if re.match(r'^[ABCD]\s+', line):
                         answer_lines.append(line)
                     else:
-                        # Continuation of previous answer
-                        answer_lines.append(line)
+                        # Continuation of previous answer (unless it's footer junk)
+                        if not re.match(r'(Stand|richtige|correct|Seite|page)', line, re.IGNORECASE):
+                            answer_lines.append(line)
                 else:
                     question_lines.append(line)
             
@@ -152,22 +172,28 @@ def parse_azf_document(text):
                     
                     # Start new answer
                     letter = match.group(1)
-                    text = match.group(2)
+                    text_part = match.group(2)
                     current_answer = {
                         'letter': letter,
-                        'text': text,
+                        'text': text_part,
                         'correct': letter == 'A'  # A is always correct
                     }
                 elif current_answer:
-                    # Continue current answer text
-                    current_answer['text'] += ' ' + line
+                    # Continue current answer text (skip if it's header/footer)
+                    if not re.match(r'(Stand|richtige|correct|Seite|page)', line, re.IGNORECASE):
+                        current_answer['text'] += ' ' + line
             
             # Add last answer
             if current_answer:
                 answers.append(current_answer)
             
-            # Validate: should have exactly 4 answers
-            if len(answers) == 4 and question_text:
+            # Clean up answer texts - remove any trailing footer fragments
+            for ans in answers:
+                ans['text'] = re.sub(r'\s*(Stand / As at::.*|richtige Antwort.*|correct answer.*|Seite.*|page.*)$', 
+                                    '', ans['text'], flags=re.IGNORECASE).strip()
+            
+            # Validate: should have exactly 4 answers and question text
+            if len(answers) == 4 and question_text and len(question_text) > 10:
                 questions.append({
                     'id': q_num,
                     'question': question_text,
@@ -176,8 +202,8 @@ def parse_azf_document(text):
                 print(f"✓ Extracted question {q_num}")
             else:
                 reason = []
-                if not question_text:
-                    reason.append("no question text")
+                if not question_text or len(question_text) <= 10:
+                    reason.append(f"question text too short ({len(question_text)} chars)")
                 if len(answers) != 4:
                     reason.append(f"found {len(answers)} answers instead of 4")
                 
@@ -186,17 +212,22 @@ def parse_azf_document(text):
                     'id': q_num,
                     'reason': reason_str,
                     'answers_found': len(answers),
-                    'has_question': bool(question_text)
+                    'has_question': bool(question_text),
+                    'question_preview': question_text[:100] if question_text else "N/A",
+                    'answer_letters': [a['letter'] for a in answers]
                 })
                 print(f"⚠ Skipped question {q_num} ({reason_str})")
         
         except Exception as e:
-            print(f"✗ Error processing question block: {e}")
+            q_num_val = q_num if 'q_num' in locals() else 'unknown'
+            print(f"✗ Error processing question {q_num_val}: {e}")
             skipped_questions.append({
-                'id': q_num if 'q_num' in locals() else 'unknown',
+                'id': q_num_val,
                 'reason': f"Exception: {str(e)}",
                 'answers_found': 0,
-                'has_question': False
+                'has_question': False,
+                'question_preview': "N/A",
+                'answer_letters': []
             })
             continue
     
@@ -298,19 +329,24 @@ def main():
     try:
         with open(log_file, 'w', encoding='utf-8') as f:
             f.write("AZF Question Extraction Log\n")
-            f.write("=" * 50 + "\n\n")
+            f.write("=" * 70 + "\n\n")
             f.write(f"Total questions extracted: {len(questions)}\n")
             f.write(f"Questions skipped: {len(skipped_questions)}\n")
             f.write(f"Expected total: {expected_total}\n")
             f.write(f"Missing: {expected_total - len(questions)}\n\n")
             
             if skipped_questions:
-                f.write("Skipped Questions:\n")
-                f.write("-" * 50 + "\n")
+                f.write("Skipped Questions (Detailed):\n")
+                f.write("=" * 70 + "\n\n")
                 for skip in skipped_questions:
-                    f.write(f"Question {skip['id']}: {skip['reason']}\n")
-                    f.write(f"  - Has question text: {skip['has_question']}\n")
-                    f.write(f"  - Answers found: {skip['answers_found']}/4\n")
+                    f.write(f"Question {skip['id']}:\n")
+                    f.write(f"  Reason: {skip['reason']}\n")
+                    f.write(f"  Has question text: {skip['has_question']}\n")
+                    f.write(f"  Answers found: {skip['answers_found']}/4\n")
+                    if skip.get('answer_letters'):
+                        f.write(f"  Answer letters found: {', '.join(skip['answer_letters'])}\n")
+                    if skip.get('question_preview'):
+                        f.write(f"  Question preview: {skip['question_preview']}\n")
                     f.write("\n")
             
             # Find missing question IDs
@@ -320,10 +356,43 @@ def main():
             
             if missing_ids:
                 f.write("\nMissing Question IDs:\n")
-                f.write("-" * 50 + "\n")
+                f.write("=" * 70 + "\n")
                 missing_list = sorted(list(missing_ids))
-                f.write(f"{missing_list}\n\n")
-                f.write(f"Total missing: {len(missing_list)}\n")
+                
+                # Group consecutive IDs for readability
+                ranges = []
+                start = missing_list[0]
+                end = missing_list[0]
+                
+                for num in missing_list[1:]:
+                    if num == end + 1:
+                        end = num
+                    else:
+                        if start == end:
+                            ranges.append(str(start))
+                        else:
+                            ranges.append(f"{start}-{end}")
+                        start = num
+                        end = num
+                
+                # Add last range
+                if start == end:
+                    ranges.append(str(start))
+                else:
+                    ranges.append(f"{start}-{end}")
+                
+                f.write(f"{', '.join(ranges)}\n\n")
+                f.write(f"Total missing: {len(missing_list)}\n\n")
+                
+                # Add helpful notes
+                f.write("\nTroubleshooting Tips:\n")
+                f.write("-" * 70 + "\n")
+                f.write("If questions are missing:\n")
+                f.write("1. Check the PDF for special formatting (tables, images, etc.)\n")
+                f.write("2. Look for page breaks in the middle of questions\n")
+                f.write("3. Verify the question has exactly 4 answers (A, B, C, D)\n")
+                f.write("4. Check if footer text is interfering with parsing\n")
+                f.write("5. Manually add missing questions to questions.json if needed\n")
         
         print(f"📋 Extraction log saved to: {log_file}")
     except Exception as e:

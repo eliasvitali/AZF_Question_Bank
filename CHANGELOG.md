@@ -1,5 +1,79 @@
 # Changelog - Bug Fixes
 
+## Version 1.2 - Additional Extraction Improvements
+
+### Fixed Issues
+
+#### 3. ✅ Footer Text Contamination (New Fix)
+
+**Problem:** 
+- Footer text from PDF pages was being included in the last answer on each page
+- Footers contain: "Stand / As at:: 2024 richtige Antwort immer A / correct answer always A Seite / page X von / of 55"
+- This corrupted answer text and made questions look wrong
+
+**Solution:**
+- Multiple regex patterns filter out footer text
+- Filters applied globally to entire document AND per-answer
+- Removes common footer patterns:
+  - "Stand / As at:: 2024..."
+  - "richtige Antwort immer A..."
+  - "correct answer always A..."
+  - "Seite / page X von / of 55"
+  - "Prüfungsfragen im Prüfungsteil..."
+
+**Example:**
+```
+Before: "Final wrong answer Stand / As at:: 2024 richtige Antwort immer A"
+After:  "Final wrong answer"
+```
+
+**Code Changes:**
+- `parse_azf_document()`: Added multiple footer removal regex patterns
+- Filters applied at document level AND during answer text cleanup
+- Prevents footer fragments from appearing anywhere
+
+---
+
+#### 4. ✅ Enhanced Extraction Logging (Improved)
+
+**Problem:**
+- Log said "no question text" but questions appeared normal
+- Unclear why some questions failed extraction
+- Hard to debug extraction issues
+
+**Solution:**
+- Added question preview in log (first 100 chars)
+- Shows which answer letters were found (e.g., A, B, C)
+- Displays actual parsed content for debugging
+- Groups consecutive missing IDs (e.g., "45-67" instead of "45, 46, 47...")
+- Added troubleshooting tips section
+
+**Enhanced Log Format:**
+```
+Question 45:
+  Reason: found 3 answers instead of 4
+  Has question text: True
+  Answers found: 3/4
+  Answer letters found: A, B, C
+  Question preview: What does the term "CLEARANCE LIMIT" mean...
+
+Missing Question IDs:
+4-10, 15, 23-45, 67
+
+Troubleshooting Tips:
+1. Check the PDF for special formatting
+2. Look for page breaks in the middle of questions
+...
+```
+
+**Benefits:**
+- Can see actual question content that failed
+- Understand if it's a parsing issue or data issue
+- Easier to manually fix missing questions
+- Better debugging with real examples
+
+---
+
 ## Version 1.1 - Bug Fixes and Improvements
 
 ### Fixed Issues

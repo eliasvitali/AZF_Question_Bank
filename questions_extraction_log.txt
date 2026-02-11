@@ -1,0 +1,186 @@
+AZF Question Extraction Log
+======================================================================
+
+Total questions extracted: 268
+Questions skipped: 23
+Expected total: 289
+Missing: 21
+
+Skipped Questions (Detailed):
+======================================================================
+
+Question 10707:
+  Reason: found 0 answers instead of 4
+  Has question text: True
+  Answers found: 0/4
+  Question preview: Berlin E-Mail: poststelle@bnetza.de Internet: http://www.bundesnetzagentur.de/Flugfunkzeugnisse Hinw
+
+Question 30:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 32:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 96:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 99:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 116:
+  Reason: found 0 answers instead of 4
+  Has question text: True
+  Answers found: 0/4
+  Question preview: Cherokee XYABC receives the following instruction: "XBC climb straight ahead until to altitude
+
+Question 122:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 124:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 133:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 134:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 140:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 158:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 170:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 178:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 196:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 210:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 223:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 224:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 250:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 251:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 252:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 256:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+Question 270:
+  Reason: question text too short (0 chars), found 5 answers instead of 4
+  Has question text: False
+  Answers found: 5/4
+  Answer letters found: A, A, B, C, D
+  Question preview: N/A
+
+
+Missing Question IDs:
+======================================================================
+30, 32, 96, 99, 116, 122, 124, 133-134, 140, 158, 170, 178, 196, 210, 223-224, 250-252, 256, 270
+
+Total missing: 22
+
+
+Troubleshooting Tips:
+----------------------------------------------------------------------
+If questions are missing:
+1. Check the PDF for special formatting (tables, images, etc.)
+2. Look for page breaks in the middle of questions
+3. Verify the question has exactly 4 answers (A, B, C, D)
+4. Check if footer text is interfering with parsing
+5. Manually add missing questions to questions.json if needed
