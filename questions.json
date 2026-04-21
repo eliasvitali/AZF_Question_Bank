@@ -754,6 +754,32 @@
     ]
   },
   {
+    "id": 30,
+    "question": "A message concerning aircraft parts and material urgently required is ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "a Flight Regularity Messages",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "an Urgency Message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "a Flight Security Message",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "ma Flight Safety Message",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 31,
     "question": "Flight Safety Messages are ...",
     "answers": [
@@ -775,6 +801,32 @@
       {
         "letter": "D",
         "text": "messages concerning the safety of an aircraft, a vessel, any other vehicle or a person",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "question": "A message concerning an aircraft being threatened by serious and/or imminent danger, requiringmimmediate assistance is called:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Distress Message",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Flight Safety Message",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Urgency Message",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Class B Message",
         "correct": false
       }
     ]
@@ -2418,6 +2470,32 @@
     ]
   },
   {
+    "id": 96,
+    "question": "A pilot will be instructed to reselect the assigned transponder code A 6620 with the following phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "RESET SQUAWK 6620",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "SQUAWK AGAIN ALPHA 6620",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "CONFIRM SQUAWKING ALPHA 6620",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "SWITCH ON ALPHA 6620",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 97,
     "question": "The prescribed phrase for obtaining permission to taxi to the runway for departure is:",
     "answers": [
@@ -2470,27 +2548,53 @@
     ]
   },
   {
-    "id": 100,
-    "question": "If a transponder does not transmit on mode C as expected, ATC will instruct the pilot to switch on mode C by using the phrase:",
+    "id": 104,
+    "question": "When shall the phrase \"TAKE-OFF\" be used by a pilot?",
     "answers": [
       {
         "letter": "A",
-        "text": "SQUAWK CHARLIE",
+        "text": "To acknowledge take-off clearance",
         "correct": true
       },
       {
         "letter": "B",
-        "text": "SQUAWK ALTIMETER",
+        "text": "Never, it is used only by the control tower",
         "correct": false
       },
       {
         "letter": "C",
-        "text": "SQUAWK PRESSURE ALTITUDE",
+        "text": "Only when the aircraft has already moved onto the active runway",
         "correct": false
       },
       {
         "letter": "D",
-        "text": "TRANSMIT ON MODE CHARLIE",
+        "text": "To inform TOWER when ready for departure",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "question": "A pilot intending to close his flight plan shall use the phrase:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "REQUEST TO CLOSE MY FLIGHT PLAN",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "REQUEST TO CANCEL IFR",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "WILL CONTINTUE VFR",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "WILL CONTINUE VMC",
         "correct": false
       }
     ]
@@ -2886,8 +2990,8 @@
     ]
   },
   {
-    "id": 2500,
-    "question": "feet before turning right, wind 270 / 6 knots, Runway 22, cleared for take-off\". What is the",
+    "id": 116,
+    "question": "Cherokee XYABC receives the following instruction: "XBC climb straight ahead until to altitude 2500 feet before turning right, wind 270 / 6 knots, Runway 22, cleared for take-off\". What is the correct readfback?",
     "answers": [
       {
         "letter": "A",
@@ -3042,6 +3146,32 @@
     ]
   },
   {
+    "id": 122,
+    "question": "A pilot of an IFR flight has been instructed to establish radio contact with another ATC unit during climb. On initial contact he has to transmit the following data:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Call sign, present and cleared level",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Call sign and present level",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Call sign and estimated time over the next compulsory reporting point",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Call sign only",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 123,
     "question": "To establish radio contact with \"MÜNCHEN GROUND\" the pilot of DIBEL shall transmit the following call:",
     "answers": [
@@ -3063,6 +3193,32 @@
       {
         "letter": "D",
         "text": "MÜNCHEN GROUND THIS IS DIBEL",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "question": "A radio station in the aeronautical mobile service may simultaneously call several stations. This call is named:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "MULTIPLE CALL",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "GENERAL CALL",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "SIMULTANEOUS CALL",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "URGENCY CALL",
         "correct": false
       }
     ]
@@ -3276,6 +3432,58 @@
     ]
   },
   {
+    "id": 133,
+    "question": "A compulsory reporting point is a defined location where a position report must be made ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "in any case",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "on request of ATC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "in IMC only",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "in VMC only",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "question": "A non-compulsory reporting point is a defined location where a position report must be made ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "on request of ATC",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "in VMC",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "in IMC",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "in any case",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 135,
     "question": "Which elements of information should an abbreviated position report during an IFR flight always contain?",
     "answers": [
@@ -3401,6 +3609,32 @@
       {
         "letter": "D",
         "text": "1500 ft or less",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "question": "A pilot of an IFR flight shall inform the ATC unit competent for approaches and departures that he has received ATIS ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "upon initial contact",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "if deemed necessary",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "if the control zone is IMC",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "on request only",
         "correct": false
       }
     ]
@@ -3848,6 +4082,32 @@
     ]
   },
   {
+    "id": 158,
+    "question": "A signal sent by radiotelephony consisting of the spoken word \"MAYDAY\" means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The aircraft is threatened by serious and/or imminent danger and of requiring immediate assistance,
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The aircraft has a very urgent message to transmit concerning the safety of an aircraft or other vehicle",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The aircraft is forced to perform a fuel dumping procedure",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The aircraft has a message to transmit concerning adverse weather conditions along its route of flight",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 159,
     "question": "An aircraft in distress shall send the following signal by radiotelephony:",
     "answers": [
@@ -4134,6 +4394,32 @@
     ]
   },
   {
+    "id": 170,
+    "question": "A signal sent by radiotelephony consisting of the spoken words \"PAN PAN\", preferable spoken three times, means:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The aircraft has a very urgent message to transmit concerning the safety of an aircraft or other vehicle and does not requiring immediate assistance",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "The aircraft is diverting from the route cleared because of a thunderstorm and asks for immediate reclearance",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "The aircraft on final approach is starting the missed approach procedure",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "The aircraft is threatened by serious and/or imminent danger and of requiring immediate assistance",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 171,
     "question": "An urgency call shall be initiated by the radiotelephony urgency signal:",
     "answers": [
@@ -4311,6 +4597,32 @@
       {
         "letter": "D",
         "text": "Squawk mode A code 7500",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "question": "A message preceded by the phrase \"TRANSMITTING BLIND DUE TO RECEIVER FAILURE\" shall be transmitted …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "on the frequency presently in use",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "on the regional guard frequency",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "to all available aeronautical stations",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "on the international emergency frequency",
         "correct": false
       }
     ]
@@ -4758,6 +5070,32 @@
     ]
   },
   {
+    "id": 196,
+    "question": "A pilot receives the clearance to hold over an enroute reporting point until a specified time. This time is called:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Holding time",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Estimated overhead time",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Estimated time of arrival",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Expected approach time",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 197,
     "question": "If a pilot has to hold over an initial approach fix ATC will issue an ...",
     "answers": [
@@ -5096,6 +5434,32 @@
     ]
   },
   {
+    "id": 210,
+    "question": "A NOTAM is distributed by ...",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "a teletype message",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "an official gazette",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "no means, since it is of no interest to pilots",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "radio",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 211,
     "question": "The collection of active NOTAM presented to the pilot by AIS is called:",
     "answers": [
@@ -5403,6 +5767,58 @@
       {
         "letter": "D",
         "text": "2 hours",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "question": "A pilot intends to fly IFR via ATS route \"G1\" to the \"ABC\" VOR and thereafter VFR. What is the correct entry in his flight plan under item- \"route\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "G1 ABC VFR",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "VFR ABC G1",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "G1 N0120/ABC VFR",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "N0120 VFR ABC G1",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "question": "A Pilot intends to fly VFR to the \"XYZ\" VOR and thereafter IFR. What is the correct entry in his flight plan under item \"route\"?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "XYZ/N0120F080 IFR,
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "VFR XYZ IFR",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "0120/XYZFO8O IFR",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "F080 XYZ IFR",
         "correct": false
       }
     ]
@@ -6058,6 +6474,84 @@
     ]
   },
   {
+    "id": 250,
+    "question": "A pilot intends to cancel his IFR flight at the minimum IFR cruising altitude in airspace E below FL 100, descend below controlled airspace and continue VFR. Which are the required weather minima?",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Flight visibility at least 5 km, distance from cloud 1000 ft vertically, 1500 m horizontally",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Flight visibility at least 3 km, distance from cloud 1000 ft vertically, 1500 m horizontally",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Flight visibility at least 8 km, horizontal distance from clouds 1500 m",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Flight visibility at least 8 km, clear of cloud",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 251,
+    "question": "A pilot departing on a VFR flight (Z - flight plan) and intending to change flight rules to IFR at the minimum IFR cruising altitude in airspace E below FL 100, has to observe the following minimum values for flight visibility / distance from clouds:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5 km flight visibility, distance from cloud 1500 m horizontally, 1000 ft vertically",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "3 km flight visibility, distance from cloud 1500 m horizontally, 1000 ft vertically",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1.5 km flight visibility, distance from cloud 1500 m horizontally, 1000 ft vertically",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1.5 km flight visibility, clear of cloud",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 252,
+    "question": "A pilot on an IFR flight (Y - flight plan) intends to change flight rules to VFR at the minimum IFR cruising level. Until leaving the controlled airspace E below FL 100 he has to observe the following minimum values for flight visibility:,
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5 km",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "8 km",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1.5 km",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "3 km",
+        "correct": false
+      }
+    ]
+  },
+  {
     "id": 253,
     "question": "During a flight with an intended change of flight rules the VFR part of this flight shall generally be conducted in such a way, that ...",
     "answers": [
@@ -6131,6 +6625,32 @@
       {
         "letter": "D",
         "text": "for the safety of taxiing aircraft",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 256,
+    "question": "A pilot taxiing on an aerodrome under all-weather operations CAT II/III is approaching a stop bar, represented by red lights at 3 m intervals across the taxiway. When the lights are switched on, taxiing across the stop bar …",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "is not permitted",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "is permitted only, when no aircraft is in sight",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "is permitted as soon as a taxi instruction is received from the aircraft‘s owner",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "is permitted only for IFR departures",
         "correct": false
       }
     ]
@@ -6469,6 +6989,32 @@
       {
         "letter": "D",
         "text": "30 seconds",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 270,
+    "question": "A standard holding pattern at FL 150 or above is to be flown outbound:",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1 minute and 30 seconds",
+        "correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2 minutes",
+        "correct": false
+      },
+      {
+        "letter": "C",
+        "text": "2 minutes and 30 seconds",
+        "correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1 minute",
         "correct": false
       }
     ]
