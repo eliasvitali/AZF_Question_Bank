@@ -9,6 +9,8 @@ An interactive study application for the AZF (Allgemeines Sprechfunkzeugnis für
 - **Progress Tracking**: Track your correct/incorrect answers and accuracy in real-time
 - **Session Statistics**: See your final score at the end of each session
 - **Review Mistakes**: Option to review only the questions you got wrong
+- **Question Memory**: Flag difficult questions and save that list in your browser
+- **Import/Export Flags**: Download a small JSON file of flagged question IDs and reuse it on another device or browser
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 - **No Server Required**: Runs entirely in your browser
 
@@ -31,6 +33,18 @@ An interactive study application for the AZF (Allgemeines Sprechfunkzeugnis für
 1. Download all files to a folder
 2. Open `index.html` in your web browser
 3. Start studying!
+
+## New: Flagged Question Memory
+
+The app now has a built-in lightweight memory system designed for exactly the "focus on what I still miss" workflow.
+
+- Use the `Flag` button on any question to add it to your difficult-question list
+- Flags are saved automatically in your browser using `localStorage`
+- Turn on `Study flagged only` to work through just those questions
+- Export your flagged list as a JSON file if you want to move it to another browser/device
+- Import a previously exported JSON file to restore your saved flagged list
+
+This gives you persistence without requiring logins, accounts, or a backend database.
 
 ### Important: How Answer Letters Work
 
@@ -170,7 +184,8 @@ The script will work with either library.
 ## Technical Details
 
 - Pure HTML/CSS/JavaScript (no frameworks required)
-- LocalStorage could be added for persistent progress tracking
+- Flagged-question memory is stored in `localStorage`
+- Flagged questions can also be exported/imported as JSON
 - Questions are shuffled client-side for privacy
 - No data is sent to any server
 
@@ -193,9 +208,9 @@ Edit the CSS variables in `style.css`:
 
 You can add a timer feature by modifying `app.js` to track time per question.
 
-### Adding Bookmarks
+### Adjusting Saved Flag Behavior
 
-Add a bookmark feature to mark difficult questions for later review.
+The browser memory uses the key `azf-flagged-question-ids` in `localStorage`. Exported files contain a `flaggedQuestionIds` array and timestamp.
 
 ## License
 

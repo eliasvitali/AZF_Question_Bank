@@ -35,13 +35,43 @@
         <div class="question-card" id="question-card">
             <div class="question-header">
                 <span class="question-number" id="question-number">Question 1 of 20</span>
-                <button class="shuffle-btn" id="shuffle-btn" title="Shuffle answers">🔀</button>
+                <div class="question-actions">
+                    <button class="flag-btn" id="flag-btn" title="Flag this question for later review" aria-pressed="false">
+                        <span class="flag-icon" aria-hidden="true">☆</span>
+                        <span id="flag-btn-text">Flag</span>
+                    </button>
+                    <button class="shuffle-btn" id="shuffle-btn" title="Shuffle answers">🔀</button>
+                </div>
             </div>
             <div class="question-text" id="question-text">Loading...</div>
             <div class="answers" id="answers-container">
                 <!-- Answers will be inserted here -->
             </div>
             <div class="feedback" id="feedback" style="display: none;"></div>
+        </div>
+
+        <div class="memory-panel">
+            <div class="memory-copy">
+                <h2>Question Memory</h2>
+                <p>Flag questions you want to revisit later, then focus only on those in a future session.</p>
+            </div>
+            <div class="memory-stats">
+                <div class="memory-stat">
+                    <span class="memory-stat-label">Flagged</span>
+                    <span class="memory-stat-value" id="flagged-count">0</span>
+                </div>
+                <label class="memory-filter">
+                    <input type="checkbox" id="flagged-only-toggle">
+                    <span>Study flagged only</span>
+                </label>
+            </div>
+            <div class="memory-actions">
+                <button class="btn btn-secondary" id="export-flags-btn" type="button">Export Flagged File</button>
+                <label class="btn btn-secondary file-upload-btn" for="import-flags-input">Import Flagged File</label>
+                <input type="file" id="import-flags-input" accept=".json,application/json">
+                <button class="btn btn-secondary" id="clear-flags-btn" type="button">Clear Flags</button>
+            </div>
+            <p class="memory-note" id="memory-status">Flags are saved in this browser automatically.</p>
         </div>
 
         <div class="controls">
