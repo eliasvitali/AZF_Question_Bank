@@ -13,6 +13,7 @@ An interactive study application for the AZF (Allgemeines Sprechfunkzeugnis für
 - **Import/Export Flags**: Download a small JSON file of flagged question IDs and reuse it on another device or browser
 - **Keyboard Shortcuts**: Use arrow keys to move between questions and `R` to flag/unflag
 - **Smart Flow**: Correct answers auto-advance, incorrect answers stay visible for review
+- **Skip + Resume**: Skip questions, reload the page, and continue where you left off in the same browser
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 - **No Server Required**: Runs entirely in your browser
 
@@ -44,6 +45,8 @@ The app now has a built-in lightweight memory system designed for exactly the "f
 - Flags are saved automatically in your browser using `localStorage`
 - Turn on `Study flagged only` to work through just those questions
 - Incorrect answers are auto-flagged by default, and this can be switched off in the app
+- Use `Next / Skip` or the right arrow key to move past a question without answering it
+- Reloading the page restores your current session state in the same browser
 - Export your flagged list as a JSON file if you want to move it to another browser/device
 - Import a previously exported JSON file to restore your saved flagged list
 

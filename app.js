@@ -3,15 +3,19 @@ class StudyApp {
     constructor() {
         this.storageKey = 'azf-flagged-question-ids';
         this.preferencesKey = 'azf-study-preferences';
+        this.sessionKey = 'azf-study-session';
+        this.autoAdvanceDelayMs = 450;
+
         this.questions = [];
         this.activeQuestions = [];
         this.currentQuestionIndex = 0;
         this.sessionStats = this.getEmptySessionStats();
-        this.studyMode = false; // false = shuffled answers, true = original order
+        this.studyMode = false;
         this.currentAnswerOrder = [];
         this.flaggedQuestionIds = new Set();
         this.showFlaggedOnly = false;
         this.autoFlagIncorrect = true;
+        this.sessionCompleted = false;
 
         this.init();
     }
@@ -20,7 +24,8 @@ class StudyApp {
         return {
             correct: 0,
             incorrect: 0,
-            answered: []
+            answersByQuestionId: {},
+            skippedQuestionIds: []
         };
     }
 
@@ -28,12 +33,19 @@ class StudyApp {
         this.loadFlaggedQuestionsFromStorage();
         this.loadPreferencesFromStorage();
         await this.loadQuestions();
+        this.loadSessionStateFromStorage();
         this.setupEventListeners();
         this.rebuildActiveQuestions();
-        this.updateFlaggedCount();
         this.syncPreferenceControls();
-        this.displayQuestion();
+        this.updateFlaggedCount();
         this.updateStats();
+        this.displayQuestion();
+
+        if (this.sessionCompleted) {
+            this.finishSession(false);
+        } else {
+            this.saveSessionState();
+        }
     }
 
     async loadQuestions() {
@@ -64,10 +76,7 @@ class StudyApp {
     }
 
     saveFlaggedQuestionsToStorage() {
-        localStorage.setItem(
-            this.storageKey,
-            JSON.stringify(this.getSortedFlaggedIds())
-        );
+        localStorage.setItem(this.storageKey, JSON.stringify(this.getSortedFlaggedIds()));
     }
 
     loadPreferencesFromStorage() {
@@ -95,6 +104,72 @@ class StudyApp {
         );
     }
 
+    loadSessionStateFromStorage() {
+        try {
+            const saved = localStorage.getItem(this.sessionKey);
+            if (!saved) {
+                return;
+            }
+
+            const parsed = JSON.parse(saved);
+            const validQuestionIds = new Set(this.questions.map(question => question.id));
+
+            if (typeof parsed.studyMode === 'boolean') {
+                this.studyMode = parsed.studyMode;
+            }
+
+            if (typeof parsed.showFlaggedOnly === 'boolean') {
+                this.showFlaggedOnly = parsed.showFlaggedOnly && this.flaggedQuestionIds.size > 0;
+            }
+
+            if (typeof parsed.currentQuestionIndex === 'number' && parsed.currentQuestionIndex >= 0) {
+                this.currentQuestionIndex = parsed.currentQuestionIndex;
+            }
+
+            if (typeof parsed.sessionCompleted === 'boolean') {
+                this.sessionCompleted = parsed.sessionCompleted;
+            }
+
+            const nextStats = this.getEmptySessionStats();
+            const answersByQuestionId = parsed.sessionStats?.answersByQuestionId || {};
+            const skippedQuestionIds = parsed.sessionStats?.skippedQuestionIds || [];
+
+            Object.entries(answersByQuestionId).forEach(([questionId, answer]) => {
+                const numericId = Number(questionId);
+                if (!validQuestionIds.has(numericId) || !answer) {
+                    return;
+                }
+
+                nextStats.answersByQuestionId[numericId] = answer;
+                if (answer.correct) {
+                    nextStats.correct++;
+                } else {
+                    nextStats.incorrect++;
+                }
+            });
+
+            nextStats.skippedQuestionIds = skippedQuestionIds
+                .filter(id => Number.isInteger(id) && validQuestionIds.has(id) && !nextStats.answersByQuestionId[id]);
+
+            this.sessionStats = nextStats;
+        } catch (error) {
+            console.warn('Could not restore session state:', error);
+        }
+    }
+
+    saveSessionState() {
+        localStorage.setItem(
+            this.sessionKey,
+            JSON.stringify({
+                studyMode: this.studyMode,
+                showFlaggedOnly: this.showFlaggedOnly,
+                currentQuestionIndex: this.currentQuestionIndex,
+                sessionCompleted: this.sessionCompleted,
+                sessionStats: this.sessionStats
+            })
+        );
+    }
+
     getSortedFlaggedIds() {
         return [...this.flaggedQuestionIds].sort((a, b) => a - b);
     }
@@ -116,7 +191,7 @@ class StudyApp {
 
     setupEventListeners() {
         document.getElementById('prev-btn').addEventListener('click', () => this.previousQuestion());
-        document.getElementById('next-btn').addEventListener('click', () => this.nextQuestion());
+        document.getElementById('next-btn').addEventListener('click', () => this.nextQuestion(true));
         document.getElementById('finish-btn').addEventListener('click', () => this.finishSession());
         document.getElementById('restart-btn').addEventListener('click', () => this.restartSession());
         document.getElementById('review-btn').addEventListener('click', () => this.reviewMistakes());
@@ -133,6 +208,8 @@ class StudyApp {
 
     syncPreferenceControls() {
         document.getElementById('auto-flag-incorrect-toggle').checked = this.autoFlagIncorrect;
+        document.getElementById('study-mode-toggle').checked = this.studyMode;
+        this.updateModeText();
     }
 
     shuffleArray(array) {
@@ -148,6 +225,14 @@ class StudyApp {
         return this.activeQuestions[this.currentQuestionIndex] || null;
     }
 
+    getAnswerRecord(questionId) {
+        return this.sessionStats.answersByQuestionId[questionId] || null;
+    }
+
+    isQuestionSkipped(questionId) {
+        return this.sessionStats.skippedQuestionIds.includes(questionId);
+    }
+
     rebuildActiveQuestions() {
         this.activeQuestions = this.showFlaggedOnly
             ? this.questions.filter(question => this.flaggedQuestionIds.has(question.id))
@@ -161,11 +246,13 @@ class StudyApp {
     resetSessionForCurrentQuestionSet() {
         this.sessionStats = this.getEmptySessionStats();
         this.currentQuestionIndex = 0;
+        this.sessionCompleted = false;
         document.getElementById('results-panel').style.display = 'none';
         document.getElementById('question-card').style.display = 'block';
         document.querySelector('.controls').style.display = 'flex';
         document.querySelector('.mode-toggle').style.display = 'flex';
         document.getElementById('finish-btn').style.display = 'none';
+        this.saveSessionState();
     }
 
     getAnswerOrder() {
@@ -174,8 +261,15 @@ class StudyApp {
             return [];
         }
 
+        const savedAnswer = this.getAnswerRecord(question.id);
+        if (savedAnswer?.answerOrderTexts?.length === question.answers.length) {
+            return savedAnswer.answerOrderTexts
+                .map(answerText => question.answers.find(answer => answer.text === answerText))
+                .filter(Boolean);
+        }
+
         if (this.studyMode) {
-            return question.answers;
+            return [...question.answers];
         }
 
         return this.shuffleArray(question.answers);
@@ -190,11 +284,12 @@ class StudyApp {
         const flagBtn = document.getElementById('flag-btn');
         const flagBtnText = document.getElementById('flag-btn-text');
         const finishBtn = document.getElementById('finish-btn');
+        const flaggedOnlyToggle = document.getElementById('flagged-only-toggle');
+
+        flaggedOnlyToggle.checked = this.showFlaggedOnly;
 
         if (!question) {
-            questionNumber.textContent = this.showFlaggedOnly
-                ? 'Flagged Study List'
-                : 'No Questions Available';
+            questionNumber.textContent = this.showFlaggedOnly ? 'Flagged Study List' : 'No Questions Available';
             questionText.textContent = this.showFlaggedOnly
                 ? 'You do not have any flagged questions yet. Flag questions during a normal session, or import a saved flagged file to focus on them here.'
                 : 'No questions could be loaded.';
@@ -216,12 +311,11 @@ class StudyApp {
         questionNumber.textContent = `Question ${this.currentQuestionIndex + 1} of ${this.activeQuestions.length}`;
         questionText.textContent = question.question;
 
+        const savedAnswer = this.getAnswerRecord(question.id);
+        const isSkipped = this.isQuestionSkipped(question.id);
+        const isAlreadyAnswered = Boolean(savedAnswer);
         this.currentAnswerOrder = this.getAnswerOrder();
         answersContainer.innerHTML = '';
-
-        const displayLetters = ['A', 'B', 'C', 'D'];
-        const previousAnswer = this.sessionStats.answered[this.currentQuestionIndex];
-        const isAlreadyAnswered = previousAnswer !== undefined;
 
         this.currentAnswerOrder.forEach((answer, index) => {
             const answerDiv = document.createElement('div');
@@ -232,20 +326,20 @@ class StudyApp {
             if (isAlreadyAnswered) {
                 answerDiv.classList.add('disabled');
 
-                if (previousAnswer.selectedAnswer === displayLetters[index]) {
+                if (savedAnswer.selectedAnswerText === answer.text) {
                     answerDiv.classList.add('selected');
-                    if (!previousAnswer.correct) {
+                    if (!savedAnswer.correct) {
                         answerDiv.classList.add('incorrect');
                     }
                 }
 
-                if (answer.correct) {
+                if (savedAnswer.correctAnswerText === answer.text) {
                     answerDiv.classList.add('correct');
                 }
             }
 
             answerDiv.innerHTML = `
-                <span class="answer-letter">${displayLetters[index]}</span>
+                <span class="answer-letter">${String.fromCharCode(65 + index)}</span>
                 <span class="answer-text">${answer.text}</span>
             `;
 
@@ -258,13 +352,14 @@ class StudyApp {
 
         if (isAlreadyAnswered) {
             feedback.style.display = 'block';
-            if (previousAnswer.correct) {
-                feedback.className = 'feedback correct';
-                feedback.textContent = 'Correct! Well done!';
-            } else {
-                feedback.className = 'feedback incorrect';
-                feedback.textContent = `Incorrect. The correct answer is ${previousAnswer.correctAnswer}.`;
-            }
+            feedback.className = savedAnswer.correct ? 'feedback correct' : 'feedback incorrect';
+            feedback.textContent = savedAnswer.correct
+                ? 'Correct! Well done!'
+                : 'Incorrect. Review the highlighted correct answer.';
+        } else if (isSkipped) {
+            feedback.style.display = 'block';
+            feedback.className = 'feedback info';
+            feedback.textContent = 'This question was skipped earlier. You can answer it now or keep moving.';
         } else {
             feedback.style.display = 'none';
         }
@@ -278,12 +373,7 @@ class StudyApp {
 
         this.updateNavigationButtons();
         this.updateModeAvailability();
-
-        if (this.currentQuestionIndex === this.activeQuestions.length - 1) {
-            finishBtn.style.display = 'inline-flex';
-        } else {
-            finishBtn.style.display = 'none';
-        }
+        finishBtn.style.display = this.currentQuestionIndex === this.activeQuestions.length - 1 ? 'inline-flex' : 'none';
     }
 
     selectAnswer(index) {
@@ -292,44 +382,33 @@ class StudyApp {
             return;
         }
 
-        const answersContainer = document.getElementById('answers-container');
-        const answerOptions = answersContainer.querySelectorAll('.answer-option');
-
-        if (this.sessionStats.answered[this.currentQuestionIndex] !== undefined) {
-            return;
-        }
-
-        if (answerOptions.length > 0 && answerOptions[0].classList.contains('disabled')) {
+        if (this.getAnswerRecord(question.id)) {
             return;
         }
 
         const selectedAnswer = this.currentAnswerOrder[index];
+        if (!selectedAnswer) {
+            return;
+        }
+
+        const correctAnswer = this.currentAnswerOrder.find(answer => answer.correct);
         const isCorrect = selectedAnswer.correct;
-        const displayLetters = ['A', 'B', 'C', 'D'];
 
-        answerOptions.forEach(option => option.classList.add('disabled'));
-        answerOptions[index].classList.add('selected');
+        this.sessionStats.answersByQuestionId[question.id] = {
+            questionId: question.id,
+            correct: isCorrect,
+            selectedAnswerText: selectedAnswer.text,
+            correctAnswerText: correctAnswer ? correctAnswer.text : '',
+            answerOrderTexts: this.currentAnswerOrder.map(answer => answer.text)
+        };
 
-        let correctIndex = -1;
-        answerOptions.forEach((option, i) => {
-            if (this.currentAnswerOrder[i].correct) {
-                option.classList.add('correct');
-                correctIndex = i;
-            } else if (i === index && !isCorrect) {
-                option.classList.add('incorrect');
-            }
-        });
-
-        const feedback = document.getElementById('feedback');
-        feedback.style.display = 'block';
+        if (this.isQuestionSkipped(question.id)) {
+            this.sessionStats.skippedQuestionIds = this.sessionStats.skippedQuestionIds.filter(id => id !== question.id);
+        }
 
         if (isCorrect) {
-            feedback.className = 'feedback correct';
-            feedback.textContent = 'Correct! Well done!';
             this.sessionStats.correct++;
         } else {
-            feedback.className = 'feedback incorrect';
-            feedback.textContent = `Incorrect. The correct answer is ${displayLetters[correctIndex]}.`;
             this.sessionStats.incorrect++;
             if (this.autoFlagIncorrect) {
                 this.addFlag(question.id);
@@ -337,30 +416,23 @@ class StudyApp {
             }
         }
 
-        this.sessionStats.answered[this.currentQuestionIndex] = {
-            questionId: question.id,
-            correct: isCorrect,
-            selectedAnswer: displayLetters[index],
-            correctAnswer: displayLetters[correctIndex]
-        };
-
-        document.getElementById('next-btn').disabled = false;
         this.updateStats();
+        this.displayQuestion();
+        this.saveSessionState();
 
-        if (this.currentQuestionIndex === this.activeQuestions.length - 1) {
-            document.getElementById('finish-btn').style.display = 'inline-flex';
-        } else if (isCorrect) {
+        if (isCorrect && this.currentQuestionIndex < this.activeQuestions.length - 1) {
+            const currentQuestionId = question.id;
             window.setTimeout(() => {
-                const answeredQuestion = this.sessionStats.answered[this.currentQuestionIndex];
-                if (answeredQuestion && answeredQuestion.questionId === question.id) {
-                    this.nextQuestion();
+                const stillOnSameQuestion = this.getCurrentQuestion()?.id === currentQuestionId;
+                if (stillOnSameQuestion && !this.sessionCompleted) {
+                    this.nextQuestion(false);
                 }
-            }, 450);
+            }, this.autoAdvanceDelayMs);
         }
     }
 
     shuffleCurrentAnswers() {
-        if (!this.studyMode && this.getCurrentQuestion()) {
+        if (!this.studyMode && this.getCurrentQuestion() && !this.getAnswerRecord(this.getCurrentQuestion().id)) {
             this.displayQuestion();
         }
     }
@@ -368,14 +440,32 @@ class StudyApp {
     previousQuestion() {
         if (this.currentQuestionIndex > 0) {
             this.currentQuestionIndex--;
+            this.sessionCompleted = false;
             this.displayQuestion();
+            this.saveSessionState();
         }
     }
 
-    nextQuestion() {
+    nextQuestion(markSkippedIfNeeded = true) {
+        const question = this.getCurrentQuestion();
+        if (!question) {
+            return;
+        }
+
+        if (markSkippedIfNeeded && !this.getAnswerRecord(question.id) && !this.isQuestionSkipped(question.id)) {
+            this.sessionStats.skippedQuestionIds.push(question.id);
+        }
+
         if (this.currentQuestionIndex < this.activeQuestions.length - 1) {
             this.currentQuestionIndex++;
+            this.sessionCompleted = false;
+            this.updateStats();
             this.displayQuestion();
+            this.saveSessionState();
+        } else {
+            this.updateStats();
+            this.displayQuestion();
+            this.saveSessionState();
         }
     }
 
@@ -383,22 +473,40 @@ class StudyApp {
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
         const hasQuestion = this.activeQuestions.length > 0;
-        const answered = this.sessionStats.answered[this.currentQuestionIndex];
 
         prevBtn.disabled = !hasQuestion || this.currentQuestionIndex === 0;
-        nextBtn.disabled = !hasQuestion || !answered;
+        nextBtn.disabled = !hasQuestion || this.currentQuestionIndex >= this.activeQuestions.length - 1;
+    }
+
+    getActiveSessionSummary() {
+        const activeQuestionIds = new Set(this.activeQuestions.map(question => question.id));
+        const answers = Object.values(this.sessionStats.answersByQuestionId)
+            .filter(answer => answer && activeQuestionIds.has(answer.questionId));
+        const skippedCount = this.sessionStats.skippedQuestionIds
+            .filter(id => activeQuestionIds.has(id))
+            .length;
+
+        return {
+            answeredCount: answers.length,
+            skippedCount,
+            correctCount: answers.filter(answer => answer.correct).length,
+            incorrectCount: answers.filter(answer => !answer.correct).length
+        };
     }
 
     updateStats() {
-        const totalAnswered = this.sessionStats.correct + this.sessionStats.incorrect;
+        const summary = this.getActiveSessionSummary();
+        const answeredCount = summary.answeredCount;
+        const skippedCount = summary.skippedCount;
+        const totalProgress = answeredCount + skippedCount;
         const totalQuestions = this.activeQuestions.length;
-        const accuracy = totalAnswered > 0
-            ? Math.round((this.sessionStats.correct / totalAnswered) * 100)
+        const accuracy = answeredCount > 0
+            ? Math.round((summary.correctCount / answeredCount) * 100)
             : 0;
 
-        document.getElementById('progress').textContent = `${totalAnswered} / ${totalQuestions}`;
-        document.getElementById('correct-count').textContent = this.sessionStats.correct;
-        document.getElementById('incorrect-count').textContent = this.sessionStats.incorrect;
+        document.getElementById('progress').textContent = `${totalProgress} / ${totalQuestions}`;
+        document.getElementById('correct-count').textContent = summary.correctCount;
+        document.getElementById('incorrect-count').textContent = summary.incorrectCount;
         document.getElementById('accuracy').textContent = `${accuracy}%`;
     }
 
@@ -417,14 +525,12 @@ class StudyApp {
         status.classList.toggle('error', isError);
     }
 
-    toggleStudyMode(enabled) {
-        this.studyMode = enabled;
-
+    updateModeText() {
         const modeText = document.getElementById('mode-text');
         const modeDescription = document.getElementById('mode-description');
         const shuffleBtn = document.getElementById('shuffle-btn');
 
-        if (enabled) {
+        if (this.studyMode) {
             modeText.textContent = 'Study Mode';
             modeDescription.textContent = '(Answer A always correct)';
             shuffleBtn.style.display = 'none';
@@ -433,8 +539,13 @@ class StudyApp {
             modeDescription.textContent = '(Answers shuffled)';
             shuffleBtn.style.display = 'block';
         }
+    }
 
+    toggleStudyMode(enabled) {
+        this.studyMode = enabled;
+        this.updateModeText();
         this.displayQuestion();
+        this.saveSessionState();
     }
 
     toggleCurrentQuestionFlag() {
@@ -453,11 +564,17 @@ class StudyApp {
 
         if (this.showFlaggedOnly) {
             this.rebuildActiveQuestions();
-            this.resetSessionForCurrentQuestionSet();
+            if (this.currentQuestionIndex >= this.activeQuestions.length) {
+                this.currentQuestionIndex = Math.max(this.activeQuestions.length - 1, 0);
+            }
+            if (this.activeQuestions.length === 0) {
+                this.sessionCompleted = false;
+            }
             this.updateStats();
         }
 
         this.displayQuestion();
+        this.saveSessionState();
     }
 
     addFlag(questionId) {
@@ -497,10 +614,7 @@ class StudyApp {
 
         if (event.key === 'ArrowRight') {
             event.preventDefault();
-            const answered = this.sessionStats.answered[this.currentQuestionIndex];
-            if (answered) {
-                this.nextQuestion();
-            }
+            this.nextQuestion(true);
             return;
         }
 
@@ -517,7 +631,7 @@ class StudyApp {
         }
 
         const tagName = target.tagName ? target.tagName.toLowerCase() : '';
-        return target.isContentEditable || tagName === 'input' || tagName === 'textarea' || tagName === 'select' || tagName === 'button' || event.metaKey || event.ctrlKey || event.altKey;
+        return target.isContentEditable || tagName === 'input' || tagName === 'textarea' || tagName === 'select' || event.metaKey || event.ctrlKey || event.altKey;
     }
 
     toggleFlaggedOnlyMode(enabled) {
@@ -529,7 +643,8 @@ class StudyApp {
 
         this.showFlaggedOnly = enabled;
         this.rebuildActiveQuestions();
-        this.resetSessionForCurrentQuestionSet();
+        this.currentQuestionIndex = 0;
+        this.sessionCompleted = false;
         this.updateStats();
 
         if (enabled) {
@@ -539,6 +654,7 @@ class StudyApp {
         }
 
         this.displayQuestion();
+        this.saveSessionState();
     }
 
     exportFlaggedQuestions() {
@@ -573,17 +689,14 @@ class StudyApp {
         try {
             const text = await file.text();
             const parsed = JSON.parse(text);
-            const importedIds = Array.isArray(parsed)
-                ? parsed
-                : parsed.flaggedQuestionIds;
+            const importedIds = Array.isArray(parsed) ? parsed : parsed.flaggedQuestionIds;
 
             if (!Array.isArray(importedIds)) {
                 throw new Error('Missing flaggedQuestionIds array');
             }
 
             const validQuestionIds = new Set(this.questions.map(question => question.id));
-            const cleanedIds = importedIds
-                .filter(id => Number.isInteger(id) && validQuestionIds.has(id));
+            const cleanedIds = importedIds.filter(id => Number.isInteger(id) && validQuestionIds.has(id));
 
             this.flaggedQuestionIds = new Set(cleanedIds);
             this.saveFlaggedQuestionsToStorage();
@@ -592,12 +705,12 @@ class StudyApp {
 
             if (this.showFlaggedOnly) {
                 this.rebuildActiveQuestions();
-                this.resetSessionForCurrentQuestionSet();
-                this.updateStats();
+                this.currentQuestionIndex = 0;
             }
 
             this.setMemoryStatus(`Imported ${cleanedIds.length} flagged question(s) from ${file.name}.`);
             this.displayQuestion();
+            this.saveSessionState();
         } catch (error) {
             console.error('Error importing flagged questions:', error);
             this.setMemoryStatus('Could not import that file. Please use a valid flagged-question JSON export.', true);
@@ -625,16 +738,18 @@ class StudyApp {
             this.showFlaggedOnly = false;
             document.getElementById('flagged-only-toggle').checked = false;
             this.rebuildActiveQuestions();
-            this.resetSessionForCurrentQuestionSet();
-            this.updateStats();
+            this.currentQuestionIndex = 0;
         }
 
         this.updateModeAvailability();
         this.setMemoryStatus('Cleared all flagged questions from this browser.');
         this.displayQuestion();
+        this.saveSessionState();
     }
 
-    finishSession() {
+    finishSession(shouldSave = true) {
+        this.sessionCompleted = true;
+
         document.getElementById('question-card').style.display = 'none';
         document.querySelector('.controls').style.display = 'none';
         document.querySelector('.mode-toggle').style.display = 'none';
@@ -642,25 +757,40 @@ class StudyApp {
         const resultsPanel = document.getElementById('results-panel');
         resultsPanel.style.display = 'block';
 
-        const totalAnswered = this.sessionStats.correct + this.sessionStats.incorrect;
-        const percentage = totalAnswered > 0
-            ? Math.round((this.sessionStats.correct / totalAnswered) * 100)
+        const summary = this.getActiveSessionSummary();
+        const answeredCount = summary.answeredCount;
+        const percentage = answeredCount > 0
+            ? Math.round((summary.correctCount / answeredCount) * 100)
             : 0;
 
         document.getElementById('result-total').textContent = this.activeQuestions.length;
-        document.getElementById('result-correct').textContent = this.sessionStats.correct;
-        document.getElementById('result-incorrect').textContent = this.sessionStats.incorrect;
+        document.getElementById('result-correct').textContent = summary.correctCount;
+        document.getElementById('result-incorrect').textContent = summary.incorrectCount;
         document.getElementById('result-percentage').textContent = `${percentage}%`;
+
+        if (shouldSave) {
+            this.saveSessionState();
+        }
     }
 
     restartSession() {
-        this.resetSessionForCurrentQuestionSet();
-        this.displayQuestion();
+        this.sessionStats = this.getEmptySessionStats();
+        this.currentQuestionIndex = 0;
+        this.sessionCompleted = false;
+
+        document.getElementById('results-panel').style.display = 'none';
+        document.getElementById('question-card').style.display = 'block';
+        document.querySelector('.controls').style.display = 'flex';
+        document.querySelector('.mode-toggle').style.display = 'flex';
+        document.getElementById('finish-btn').style.display = 'none';
+
         this.updateStats();
+        this.displayQuestion();
+        this.saveSessionState();
     }
 
     reviewMistakes() {
-        const mistakeIds = this.sessionStats.answered
+        const mistakeIds = Object.values(this.sessionStats.answersByQuestionId)
             .filter(answer => answer && !answer.correct)
             .map(answer => answer.questionId);
 
@@ -669,25 +799,30 @@ class StudyApp {
             return;
         }
 
-        this.flaggedQuestionIds = new Set([
-            ...this.flaggedQuestionIds,
-            ...mistakeIds
-        ]);
+        this.flaggedQuestionIds = new Set([...this.flaggedQuestionIds, ...mistakeIds]);
         this.saveFlaggedQuestionsToStorage();
         this.updateFlaggedCount();
         this.updateModeAvailability();
 
-        document.getElementById('flagged-only-toggle').checked = true;
         this.showFlaggedOnly = true;
+        document.getElementById('flagged-only-toggle').checked = true;
         this.rebuildActiveQuestions();
-        this.resetSessionForCurrentQuestionSet();
+        this.currentQuestionIndex = 0;
+        this.sessionCompleted = false;
+        this.sessionStats = this.getEmptySessionStats();
         this.setMemoryStatus(`Moved ${mistakeIds.length} mistake(s) into your flagged study list and started a flagged-only session.`);
-        this.displayQuestion();
         this.updateStats();
+
+        document.getElementById('results-panel').style.display = 'none';
+        document.getElementById('question-card').style.display = 'block';
+        document.querySelector('.controls').style.display = 'flex';
+        document.querySelector('.mode-toggle').style.display = 'flex';
+
+        this.displayQuestion();
+        this.saveSessionState();
     }
 }
 
-// Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     window.app = new StudyApp();
 });
