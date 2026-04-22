@@ -11,6 +11,8 @@ An interactive study application for the AZF (Allgemeines Sprechfunkzeugnis für
 - **Review Mistakes**: Option to review only the questions you got wrong
 - **Question Memory**: Flag difficult questions and save that list in your browser
 - **Import/Export Flags**: Download a small JSON file of flagged question IDs and reuse it on another device or browser
+- **Keyboard Shortcuts**: Use arrow keys to move between questions and `R` to flag/unflag
+- **Smart Flow**: Correct answers auto-advance, incorrect answers stay visible for review
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 - **No Server Required**: Runs entirely in your browser
 
@@ -41,6 +43,7 @@ The app now has a built-in lightweight memory system designed for exactly the "f
 - Use the `Flag` button on any question to add it to your difficult-question list
 - Flags are saved automatically in your browser using `localStorage`
 - Turn on `Study flagged only` to work through just those questions
+- Incorrect answers are auto-flagged by default, and this can be switched off in the app
 - Export your flagged list as a JSON file if you want to move it to another browser/device
 - Import a previously exported JSON file to restore your saved flagged list
 

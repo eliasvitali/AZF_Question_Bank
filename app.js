@@ -2,6 +2,7 @@
 class StudyApp {
     constructor() {
         this.storageKey = 'azf-flagged-question-ids';
+        this.preferencesKey = 'azf-study-preferences';
         this.questions = [];
         this.activeQuestions = [];
         this.currentQuestionIndex = 0;
@@ -10,6 +11,7 @@ class StudyApp {
         this.currentAnswerOrder = [];
         this.flaggedQuestionIds = new Set();
         this.showFlaggedOnly = false;
+        this.autoFlagIncorrect = true;
 
         this.init();
     }
@@ -24,10 +26,12 @@ class StudyApp {
 
     async init() {
         this.loadFlaggedQuestionsFromStorage();
+        this.loadPreferencesFromStorage();
         await this.loadQuestions();
         this.setupEventListeners();
         this.rebuildActiveQuestions();
         this.updateFlaggedCount();
+        this.syncPreferenceControls();
         this.displayQuestion();
         this.updateStats();
     }
@@ -66,6 +70,31 @@ class StudyApp {
         );
     }
 
+    loadPreferencesFromStorage() {
+        try {
+            const saved = localStorage.getItem(this.preferencesKey);
+            if (!saved) {
+                return;
+            }
+
+            const parsed = JSON.parse(saved);
+            if (typeof parsed.autoFlagIncorrect === 'boolean') {
+                this.autoFlagIncorrect = parsed.autoFlagIncorrect;
+            }
+        } catch (error) {
+            console.warn('Could not load study preferences:', error);
+        }
+    }
+
+    savePreferencesToStorage() {
+        localStorage.setItem(
+            this.preferencesKey,
+            JSON.stringify({
+                autoFlagIncorrect: this.autoFlagIncorrect
+            })
+        );
+    }
+
     getSortedFlaggedIds() {
         return [...this.flaggedQuestionIds].sort((a, b) => a - b);
     }
@@ -98,6 +127,12 @@ class StudyApp {
         document.getElementById('export-flags-btn').addEventListener('click', () => this.exportFlaggedQuestions());
         document.getElementById('import-flags-input').addEventListener('change', (e) => this.importFlaggedQuestions(e));
         document.getElementById('clear-flags-btn').addEventListener('click', () => this.clearFlaggedQuestions());
+        document.getElementById('auto-flag-incorrect-toggle').addEventListener('change', (e) => this.toggleAutoFlagIncorrect(e.target.checked));
+        document.addEventListener('keydown', (event) => this.handleKeydown(event));
+    }
+
+    syncPreferenceControls() {
+        document.getElementById('auto-flag-incorrect-toggle').checked = this.autoFlagIncorrect;
     }
 
     shuffleArray(array) {
@@ -296,6 +331,10 @@ class StudyApp {
             feedback.className = 'feedback incorrect';
             feedback.textContent = `Incorrect. The correct answer is ${displayLetters[correctIndex]}.`;
             this.sessionStats.incorrect++;
+            if (this.autoFlagIncorrect) {
+                this.addFlag(question.id);
+                this.setMemoryStatus(`Question ${question.id} was answered incorrectly and added to your flagged list.`);
+            }
         }
 
         this.sessionStats.answered[this.currentQuestionIndex] = {
@@ -310,6 +349,13 @@ class StudyApp {
 
         if (this.currentQuestionIndex === this.activeQuestions.length - 1) {
             document.getElementById('finish-btn').style.display = 'inline-flex';
+        } else if (isCorrect) {
+            window.setTimeout(() => {
+                const answeredQuestion = this.sessionStats.answered[this.currentQuestionIndex];
+                if (answeredQuestion && answeredQuestion.questionId === question.id) {
+                    this.nextQuestion();
+                }
+            }, 450);
         }
     }
 
@@ -398,16 +444,12 @@ class StudyApp {
         }
 
         if (this.flaggedQuestionIds.has(question.id)) {
-            this.flaggedQuestionIds.delete(question.id);
+            this.removeFlag(question.id);
             this.setMemoryStatus(`Question ${question.id} removed from your flagged list.`);
         } else {
-            this.flaggedQuestionIds.add(question.id);
+            this.addFlag(question.id);
             this.setMemoryStatus(`Question ${question.id} added to your flagged list.`);
         }
-
-        this.saveFlaggedQuestionsToStorage();
-        this.updateFlaggedCount();
-        this.updateModeAvailability();
 
         if (this.showFlaggedOnly) {
             this.rebuildActiveQuestions();
@@ -416,6 +458,66 @@ class StudyApp {
         }
 
         this.displayQuestion();
+    }
+
+    addFlag(questionId) {
+        this.flaggedQuestionIds.add(questionId);
+        this.saveFlaggedQuestionsToStorage();
+        this.updateFlaggedCount();
+        this.updateModeAvailability();
+    }
+
+    removeFlag(questionId) {
+        this.flaggedQuestionIds.delete(questionId);
+        this.saveFlaggedQuestionsToStorage();
+        this.updateFlaggedCount();
+        this.updateModeAvailability();
+    }
+
+    toggleAutoFlagIncorrect(enabled) {
+        this.autoFlagIncorrect = enabled;
+        this.savePreferencesToStorage();
+        this.setMemoryStatus(
+            enabled
+                ? 'Auto-flagging for incorrect answers is on.'
+                : 'Auto-flagging for incorrect answers is off.'
+        );
+    }
+
+    handleKeydown(event) {
+        if (this.shouldIgnoreShortcut(event)) {
+            return;
+        }
+
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            this.previousQuestion();
+            return;
+        }
+
+        if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            const answered = this.sessionStats.answered[this.currentQuestionIndex];
+            if (answered) {
+                this.nextQuestion();
+            }
+            return;
+        }
+
+        if (event.key.toLowerCase() === 'r') {
+            event.preventDefault();
+            this.toggleCurrentQuestionFlag();
+        }
+    }
+
+    shouldIgnoreShortcut(event) {
+        const target = event.target;
+        if (!target) {
+            return false;
+        }
+
+        const tagName = target.tagName ? target.tagName.toLowerCase() : '';
+        return target.isContentEditable || tagName === 'input' || tagName === 'textarea' || tagName === 'select' || tagName === 'button' || event.metaKey || event.ctrlKey || event.altKey;
     }
 
     toggleFlaggedOnlyMode(enabled) {

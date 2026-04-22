@@ -39,6 +39,7 @@
                     <button class="flag-btn" id="flag-btn" title="Flag this question for later review" aria-pressed="false">
                         <span class="flag-icon" aria-hidden="true">☆</span>
                         <span id="flag-btn-text">Flag</span>
+                        <span class="shortcut-hint" aria-hidden="true">R</span>
                     </button>
                     <button class="shuffle-btn" id="shuffle-btn" title="Shuffle answers">🔀</button>
                 </div>
@@ -71,12 +72,25 @@
                 <input type="file" id="import-flags-input" accept=".json,application/json">
                 <button class="btn btn-secondary" id="clear-flags-btn" type="button">Clear Flags</button>
             </div>
+            <div class="study-preferences">
+                <label class="memory-filter">
+                    <input type="checkbox" id="auto-flag-incorrect-toggle" checked>
+                    <span>Auto-flag incorrect answers</span>
+                </label>
+                <p class="memory-note inline-note">Incorrect answers stay on screen. Correct answers automatically advance to the next question.</p>
+            </div>
             <p class="memory-note" id="memory-status">Flags are saved in this browser automatically.</p>
         </div>
 
         <div class="controls">
-            <button class="btn btn-secondary" id="prev-btn" disabled>← Previous</button>
-            <button class="btn btn-primary" id="next-btn" disabled>Next →</button>
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <span class="btn-label">← Previous</span>
+                <span class="shortcut-hint" aria-hidden="true">←</span>
+            </button>
+            <button class="btn btn-primary" id="next-btn" disabled>
+                <span class="btn-label">Next →</span>
+                <span class="shortcut-hint" aria-hidden="true">→</span>
+            </button>
             <button class="btn btn-success" id="finish-btn" style="display: none;">Finish Session</button>
         </div>
 
@@ -119,6 +133,7 @@
 
         <footer>
             <p>Study efficiently with randomized questions</p>
+            <p class="note">Shortcuts: <kbd>←</kbd> previous question, <kbd>→</kbd> next question, <kbd>R</kbd> flag or unflag the current question.</p>
             <p class="note">Note: In the actual exam, answer positions are randomized. This app helps you learn the content, not just memorize positions!</p>
         </footer>
     </div>
