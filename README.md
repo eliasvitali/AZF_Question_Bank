@@ -1,6 +1,9 @@
 # AZF Exam Study App ✈️
 
-An interactive study application for the AZF (Allgemeines Sprechfunkzeugnis für den Flugfunkdienst) aviation radio examination.
+DISCLAIMER: this is ENTIRELY vibe (AI) coded, because I simply needed something quick and functional and not professional looking at all. Use at your own risk. The questions are extracted directly from the PDF procided by the Bundesnetzagentur, however some questions had to be manually extracted and edited. It is a much more useful tool as it actually tests you instead of just providing you the answer. It was created using the most recent questions as of April 2026. I do not plan to ever edit or make it better, so if you are finding this much later on, go to the BNA website and find their newest questions file and just re-run the extraction yourself.
+
+
+An interactive study application for the AZF aviation radio examination.
 
 ## Features
 
